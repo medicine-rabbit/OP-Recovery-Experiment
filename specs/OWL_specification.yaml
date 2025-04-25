@@ -1,0 +1,53 @@
+owl_design:
+  parameters:
+    hrv_lower_threshold: null  # Set your value
+    owl_volume_reduction: 0.75
+    complication_definition: "Number of complex factors added to a lift"
+    load_factor_formula: "1.0 - (0.3 * complication)"
+    volume_load_formula: "total_reps * weight"
+
+  movement_complexity_index:
+    full_snatch: 5
+    clean_and_jerk: 5
+    hang_snatch: 4
+    pulls_with_tempo_or_holds: 3
+    squats_or_pulls: 2
+    accessory: 1
+
+  rpe_multiplier:
+    "6-7": 1.0
+    "7.5": 1.1
+    "8.0": 1.2
+    "8.5": 1.4
+    "9.0": 1.5
+    "9.5": 1.7
+    "10.0": 2.0
+
+  metrics:
+    stimulus_mtor: "sum of volume_load for all lifts"
+    vol_fatigue: "volume_load + MCI * complexity_bonus + RPE * rpe_multiplier"
+    sys_fatigue: "EPOC score of entire effort"
+    weighted_sfr:
+      system: "stimulus_mtor / sys_fatigue"
+      volume: "stimulus_mtor / vol_fatigue"
+
+  training_rules:
+    rule_1:
+      name: "Auto-regulate OWL Based on HRV"
+      algorithm:
+        if: "HRV_current < hrv_lower_threshold"
+        then: "reduce OWL volume"
+    rule_2:
+      name: "Prevent Neural Overlap"
+      algorithm:
+        if: "OWL_completed == TRUE and neuro_work_planned == TRUE"
+        then:
+          cancel: "neuro work (e.g., juggling, KB flows)"
+          replace_with: "NSDR (e.g., 10 min yoga nidra)"
+    rule_3:
+      name: "Post-OWL Recovery"
+      actions:
+        - NSDR: "10 min"
+        - condition: "if HRV_current > hrv_lower_threshold"
+          then: "cold shower (2 min)"
+        - supplements: ["Alpha-GPC", "Tart Cherry"]
