@@ -7,6 +7,7 @@ from garminconnect import (
 from datetime import date, timedelta
 import getpass
 import yaml
+import os
 
 # Step 1: Login
 email = input("Enter your Garmin email: ")
@@ -16,13 +17,15 @@ client.login()
 
 # Step 2: Get today's and yesterday's date
 today = date.today()
-yesterday = today - timedelta(days=1)
+yesterday_obj = date.today() - timedelta(days=1)
+yesterday = yesterday_obj.isoformat()
+
 
 # Step 3: Pull yesterday's health data
-hrv_data = client.get_body_battery(yesterday.isoformat())
-stress_data = client.get_stress_data(yesterday.isoformat())
-sleep_data = client.get_sleep_data(yesterday.isoformat())
-hr_data = client.get_heart_rates(yesterday.isoformat())
+hrv_data = client.get_body_battery(yesterday)
+stress_data = client.get_stress_data(yesterday)
+sleep_data = client.get_sleep_data(yesterday)
+hr_data = client.get_heart_rates(yesterday)
 
 # Step 4: Manual inputs
 grip_strength = input("Enter today's grip strength (kg): ")
@@ -40,7 +43,20 @@ daily_entry = {
 }
 
 # Step 6: Save as YAML in experiment directory
-with open(f"/path/to/experiment/logs/{yesterday}.yaml", "w") as file:
+
+# Use yesterday_obj directly to extract formatted components
+year = yesterday_obj.strftime("%Y")
+month = yesterday_obj.strftime("%m")
+month_name = yesterday_obj.strftime("%b")  # e.g., Apr
+day = yesterday_obj.strftime("%d")
+
+log_dir = f"/home/daniel/OP_Recovery_Experiment/logs/{year}/{month}-{month_name}/{day}"
+os.makedirs(log_dir, exist_ok=True)
+
+log_path = os.path.join(log_dir, f"{day}.yaml")
+
+with open(log_path, "w") as file:
     yaml.dump(daily_entry, file)
 
-print("Daily data saved successfully.")
+print(f"✅ Daily data saved to {log_path}")
+
