@@ -5,3 +5,16 @@
  create mode 100644 sync.log
 To github.com:medicine-rabbit/OP-Recovery-Experiment.git
    f335600..b06ebc0  main -> main
+[main 97c1cb6] Daily sync: 2025-04-25 23:59:00
+ 10 files changed, 4478 insertions(+), 1 deletion(-)
+ create mode 100644 data/processed/feature_datasets/2025-04-25_features.csv
+ create mode 100644 data/processed/unified_runs/.~lock.2025-04-25_run_unified.csv#
+ create mode 100644 data/processed/unified_runs/2025-04-25_run_unified.csv
+ delete mode 100644 scripts/.daily_sync.sh.kate-swp
+ create mode 100644 scripts/create_feature_dataset.py
+ create mode 100644 scripts/garmin.fit
+ create mode 100644 scripts/parse_run.py
+ create mode 100644 scripts/stryd.csv
+ create mode 100644 specs/.OWL_specification.yaml.kate-swp
+To github.com:medicine-rabbit/OP-Recovery-Experiment.git
+   2295b43..97c1cb6  main -> main
