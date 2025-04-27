@@ -10,7 +10,7 @@ results:
   Snatch:
     - 28 kg
     - 30 kg
-    - 35 kg
+    - 33 kg
     - 35 kg
     - 35 kg
   Hang Clean + Jerk:
@@ -29,11 +29,12 @@ post_session_interventions:
   - NSDR 10 min (Huberman)
 
 pre_session_biometrics:
-  hrv: 29  # ms (example)
+  hrv: 29  # ms
   respiration_rate: 16  # breaths per minute
 
 post_session_biometrics:
   hrv: 30  # ms
   respiration_rate: 21  # breaths per minute
+
 
 tags: []

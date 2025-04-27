@@ -1,15 +1,35 @@
 specification_name: Aerobic Strides
+
 description: |
-  ...
+  Short, submaximal running strides performed within aerobic heart rate zones
+  to stimulate mitochondrial biogenesis, BDNF signaling, fast-twitch oxidative fiber recruitment,
+  and neuromuscular coordination, without significant lactate accumulation.
+  Session consists of multiple stride-walk cycles.
+
 constants:
   TARGET_100m_PACE: 15.0
   TARGET_POWER_DECAY: 0.1
   MHR: 183
   Z3_UPPER_BOUNDARY: MHR * 0.84
 
-fusion_requirement: {...}
-pathway_targets: [...]
-stimulus_characteristics: {...}
+fusion_requirement:
+  fusion_required: false
+  notes: |
+    No fusion monitoring needed. Primary objectives are aerobic mechanical output,
+    mitochondrial signaling, and neuroadaptive response.
+
+pathway_targets:
+  - AMPK
+  - MITO
+  - BDNF
+  - Neuromuscular_Sharpness
+
+stimulus_characteristics:
+  cognitive_complexity: moderate
+  emotional_valence: positive-focused
+  duration_unit: meters
+  recommended_minimum_duration: 5 × 80m strides
+  recommended_maximum_duration: 10 × 100m strides
 
 logging_requirements:
   fields_to_log:
@@ -31,6 +51,7 @@ logging_requirements:
       average_pace_per_meter: null
       power_decay: null
       notes: null
+
     stride_walk_efforts:
       - stride_effort:
           start_time: null
@@ -49,9 +70,15 @@ logging_requirements:
           hr_decay_rate_bpm_per_sec: null
 
 perceptron_integration:
-  stimulus_time_credit: [...]
+  stimulus_time_credit:
+    - { AMPK: total_stride_duration_minutes }
+    - { MITO: total_stride_duration_minutes }
+    - { BDNF: total_stride_duration_minutes }
+    - { Neuromuscular_Sharpness: total_stride_duration_minutes }
   activation_multiplier: 1.0
-  notes: "..."
+  notes: |
+    Only active stride time counts toward stimulus credit.
+    Walk recoveries are measured but not credited unless otherwise specified.
 
 derived_fields_calculations:
   hr_decay_rate_bpm_per_sec: |
@@ -69,16 +96,4 @@ derived_fields_calculations:
   power_decay: |
     avg_stryd_power[first stride] - avg_stryd_power[last stride]
 
-progression_metrics:
-  - metric_name: Post-Stride HR Spike Zone
-    target_value: Zone 3
-    advancement_condition: All post_stride_hr_spike values must remain within Zone 3 during a full session.
-  - metric_name: Average Stride Duration (60m)
-    target_value: 9 seconds
-    advancement_condition: Average stride time over 5 strides must be ≤ 9 seconds.
-  - metric_name: Average Stride Duration (80m)
-    target_value: 12 seconds
-    advancement_condition: Average stride time over 5 strides must be ≤ 12 seconds.
-  - metric_name: Average Stride Duration (100m)
-    target_value: 15 seconds
-    advancement_condition: Average stride time over 5 strides must be ≤ 15 seconds.
+# Note: Progression metrics and phase advancement rules will be defined separately in the Program YAML, not here.
