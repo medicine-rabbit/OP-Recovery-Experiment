@@ -1,6 +1,6 @@
-body_weight: 80.55
-date: '2025-04-25'
-grip_strength: 50.1
+body_weight_kg: 80.55
+garmin_physiology_date: '2025-04-25'
+grip_strength_kg: 50.1
 hr_data:
   calendarDate: '2025-04-25'
   endTimestampGMT: '2025-04-26T04:00:00.0'
@@ -1341,6 +1341,7 @@ hrv_data:
   endTimestampLocal: '2025-04-26T00:00:00.0'
   startTimestampGMT: '2025-04-25T04:00:00.0'
   startTimestampLocal: '2025-04-25T00:00:00.0'
+log_date: '2025-04-26'
 sleep_data:
   avgOvernightHrv: 39.0
   bodyBatteryChange: 43

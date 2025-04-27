@@ -4,6 +4,7 @@ from garminconnect import (
     GarminConnectTooManyRequestsError,
     GarminConnectAuthenticationError
 )
+
 from datetime import date, timedelta
 import getpass
 import yaml
@@ -16,8 +17,10 @@ client = Garmin(email, password)
 client.login()
 
 # Step 2: Get today's and yesterday's date
-today = date.today()
-yesterday_obj = date.today() - timedelta(days=1)
+today_obj = date.today()
+yesterday_obj = today_obj - timedelta(days=1)
+
+today = today_obj.isoformat()
 yesterday = yesterday_obj.isoformat()
 
 
@@ -33,9 +36,10 @@ body_weight = input("Enter today's body weight (kg): ")
 
 # Step 5: Package into dict
 daily_entry = {
-    "date": str(yesterday),
-    "grip_strength": float(grip_strength),
-    "body_weight": float(body_weight),
+    "log_date": today,                           # date you collected data
+    "garmin_physiology_date": yesterday,         # Garmin's physiological data date
+    "grip_strength_kg": float(grip_strength),
+    "body_weight_kg": float(body_weight),
     "hrv_data": hrv_data,
     "stress_data": stress_data,
     "sleep_data": sleep_data,

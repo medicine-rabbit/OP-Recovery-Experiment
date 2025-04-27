@@ -1,0 +1,38 @@
+session_date: YYYY-MM-DD
+goal: |
+  [Describe the main goal of this session or workflow]
+  (e.g., Validate BDNF pathway activation after aerobic strides.)
+
+methods:
+  - name: [Method 1 Name]
+    description: |
+      [Short description of method]
+      (e.g., Manual validation using grip strength and REM readings.)
+    performed_by: [Human or Computer]
+    operators:
+      - [Operator 1 Description]
+      - [Operator 2 Description]
+      - [Operator 3 Description]
+    time_estimate_minutes: [Rough minutes to complete manually]
+
+  - name: [Method 2 Name]
+    description: |
+      [Alternative or automated method description]
+      (e.g., Scripted data pull and auto-tag suggestion.)
+    performed_by: [Human or Computer]
+    operators:
+      - [Operator 1 Description]
+      - [Operator 2 Description]
+    time_estimate_minutes: [Estimated time saved or needed]
+
+selection_rules:
+  - if: "[Condition] (e.g., Fusion rate ≥ 95%)"
+    then: "[Preferred Method] (e.g., Prefer Semi-Automated Validation)"
+  - if: "[Condition]"
+    then: "[Fallback or Manual Method]"
+
+fusion_notes: |
+  [Any notes about how Fusion was preserved, tested, or degraded during method use.]
+
+hcwr_estimate: |
+  [Optional: Rough human-to-computer work ratio for this workflow — e.g., 60% Human / 40% Computer.]

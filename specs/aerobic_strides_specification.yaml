@@ -1,0 +1,84 @@
+specification_name: Aerobic Strides
+description: |
+  ...
+constants:
+  TARGET_100m_PACE: 15.0
+  TARGET_POWER_DECAY: 0.1
+  MHR: 183
+  Z3_UPPER_BOUNDARY: MHR * 0.84
+
+fusion_requirement: {...}
+pathway_targets: [...]
+stimulus_characteristics: {...}
+
+logging_requirements:
+  fields_to_log:
+    session_metadata:
+      start_time: null
+      end_time: null
+      total_number_of_strides_completed: null
+      average_stride_distance_meters: null
+      average_stride_duration_seconds: null
+      average_stride_heart_rate_bpm: null
+      average_stride_post_hr_spike_bpm: null
+      number_stride_walk_efforts: null
+      average_walk_duration_seconds: null
+      RSS: null
+      sfr_AMPK: null
+      sfr_MITO: null
+      sfr_BDNF: null
+      average_hr_decay_per_minute: null
+      average_pace_per_meter: null
+      power_decay: null
+      notes: null
+    stride_walk_efforts:
+      - stride_effort:
+          start_time: null
+          end_time: null
+          duration_seconds: null
+          stride_distance_meters: null
+          post_stride_hr_spike: null
+          starting_hr: null
+          avg_garmin_power: null
+          avg_stryd_power: null
+        walk_effort:
+          start_time: null
+          end_time: null
+          duration_seconds: null
+          peak_hr: null
+          hr_decay_rate_bpm_per_sec: null
+
+perceptron_integration:
+  stimulus_time_credit: [...]
+  activation_multiplier: 1.0
+  notes: "..."
+
+derived_fields_calculations:
+  hr_decay_rate_bpm_per_sec: |
+    (peak_hr - lower_threshold_hr) / duration_seconds
+  average_stride_duration: |
+    sum(stride effort durations) / number of strides
+  average_hr_decay_per_minute: |
+    average_stride_post_hr_spike_bpm / average_walk_duration_seconds
+  sfr_AMPK: |
+    total_stride_duration_minutes / RSS
+  sfr_MITO: |
+    total_stride_duration_minutes / RSS
+  sfr_BDNF: |
+    (total_stride_duration_minutes / RSS) + 15
+  power_decay: |
+    avg_stryd_power[first stride] - avg_stryd_power[last stride]
+
+progression_metrics:
+  - metric_name: Post-Stride HR Spike Zone
+    target_value: Zone 3
+    advancement_condition: All post_stride_hr_spike values must remain within Zone 3 during a full session.
+  - metric_name: Average Stride Duration (60m)
+    target_value: 9 seconds
+    advancement_condition: Average stride time over 5 strides must be ≤ 9 seconds.
+  - metric_name: Average Stride Duration (80m)
+    target_value: 12 seconds
+    advancement_condition: Average stride time over 5 strides must be ≤ 12 seconds.
+  - metric_name: Average Stride Duration (100m)
+    target_value: 15 seconds
+    advancement_condition: Average stride time over 5 strides must be ≤ 15 seconds.

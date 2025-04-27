@@ -1,0 +1,45 @@
+program_name: Aerobic Strides Base Phase
+specification_reference: aerobic_strides_specification.yaml
+description: |
+  Adaptive aerobic neuromuscular conditioning phase using structured aerobic strides.
+  Progression based on physiological conditions, not preset calendar weeks.
+
+phases:
+  - phase_name: 60m Strides Phase
+    stride_distance_meters: 60
+    initial_stride_sets: 5
+    target_stride_duration_seconds: 9
+    post_stride_hr_zone_target: Z3
+    progression_conditions:
+      - all post_stride_hr_spike values during a session must remain within Z3
+      - average_stride_duration_seconds must be ≤ 9 seconds
+    notes: |
+      Phase cannot progress to 80m until both HR zone and stride time targets are satisfied.
+      Targets may be eased if recovery or base condition requires adjustment.
+    post_session_intervention:
+      type: NSDR
+      timing_minutes_after_session: 60
+      duration_minutes: 10-20
+      reasoning: "NSDR may maintain BDNF and CREB activity during the plasticity window."
+
+  - phase_name: 80m Strides Phase
+    stride_distance_meters: 80
+    initial_stride_sets: 5
+    target_stride_duration_seconds: 12
+    post_stride_hr_zone_target: Z3
+    progression_conditions:
+      - all post_stride_hr_spike values during a session must remain within Z3
+      - average_stride_duration_seconds must be ≤ 12 seconds
+    notes: |
+      Phase cannot progress to 100m until both HR zone and stride time targets are satisfied.
+
+  - phase_name: 100m Strides Phase
+    stride_distance_meters: 100
+    initial_stride_sets: 5
+    target_stride_duration_seconds: 15
+    post_stride_hr_zone_target: Z3
+    progression_conditions:
+      - all post_stride_hr_spike values during a session must remain within Z3
+      - average_stride_duration_seconds must be ≤ 15 seconds
+    notes: |
+      Final aerobic strides phase before transition to anaerobic development.

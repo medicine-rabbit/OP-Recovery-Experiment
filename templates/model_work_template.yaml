@@ -1,0 +1,10 @@
+activity_type: Open-Ended Modeling Work
+start_time: 2025-04-26T13:00:00  # <-- (enter actual start time)
+end_time: 2025-04-26T15:00:00    # <-- (enter actual end time)
+total_duration_minutes: 120      # <-- (end - start in minutes)
+task_focus: "First Modeling Specification Setup"  # <-- (brief task description)
+
+stimulus_credit:
+  BDNF: 120
+  CREB: 120
+  Executive_Function: 120

@@ -1,0 +1,37 @@
+specification_name: Open-Ended Modeling Work
+description: |
+  Cognitive modeling sessions aimed at constructing, refining, or expanding Adaptive Systems Physiology models, protocols, or structures.
+
+fusion_requirement:
+  fusion_required: false
+  notes: |
+    No fusion monitoring needed. Success criteria are knowledge structure emergence and sustained cognitive load.
+
+pathway_targets:
+  - BDNF+
+  - CREB+
+  - Wnt/β-catenin+
+  - Executive Function Resilience+
+
+stimulus_characteristics:
+  cognitive_complexity: high
+  emotional_valence: neutral-positive (focused engagement)
+  duration_unit: minutes
+  recommended_minimum_duration: 30  # Minutes for sufficient BDNF/CREB activation
+  recommended_maximum_duration: 150 # Avoid cognitive fatigue
+
+logging_requirements:
+  fields_to_log:
+    - start_time
+    - end_time
+    - total_duration_minutes
+    - task_focus (e.g., "Fusion Specification Draft", "GOMS YAML Mapping", etc.)
+
+perceptron_integration:
+  stimulus_time_credit:
+    - BDNF: total_duration_minutes
+    - CREB: total_duration_minutes
+    - Executive_Function: total_duration_minutes
+  activation_multiplier: 1.0
+  notes: |
+    Each minute of open-ended modeling counts fully toward pathway stimulus time tracking.
