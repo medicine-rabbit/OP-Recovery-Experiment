@@ -1,0 +1,9 @@
+rules:
+  - if exercise in ["Snatch", "Hang Clean + Jerk"] and RPE >= 8:
+      activate: mTOR+
+  - if "Lateral Lunge KB Toss" performed:
+      activate: BDNF+
+  - if Tart Cherry consumed post-session:
+      tag: RECOVERY+
+  - calculate:
+      SFR[mTOR+] = total_volume / session_time
