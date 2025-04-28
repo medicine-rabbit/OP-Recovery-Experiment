@@ -1,0 +1,46 @@
+specification:
+  name: MAF_Run_Z2_Heartlek
+  version: 1.0
+  description: |
+    Combined base run structure consisting of:
+    (1) a fixed-distance MAF test at ~75% HRmax, followed by
+    (2) an open-ended Zone 2 heartlek (free running with HR kept below ~80% HRmax).
+    Used for aerobic base development, substrate crossover training, and ventilatory control.
+
+  structure:
+    - phase: MAF_Test
+      distance_km: 5.0  # or adjust per cycle
+      target_hr_bpm: 127
+      acceptable_hr_drift_bpm: 2  # allowable increase across splits
+      completion_criteria:
+        - maintain HR within target ±3 bpm
+        - no excessive drift (>2 bpm split-to-split unless environmental factors logged)
+        - no fatigue event post-run (or event is mild and resolves with simple mitigation)
+    - phase: Z2_Heartlek
+      distance_km: variable
+      target_hr_ceiling_bpm: 137
+      progression_criteria:
+        - no delayed fatigue within 3–4 hr post-session
+        - perceived effort stays low (RPE ≤ 3/10)
+        - aerobic markers improving (e.g., lower HR at faster pace, stable cadence)
+        - soreness < mild by next morning
+        - maintain mechanical form (cadence and rSFR in acceptable range)
+
+  progression_logic:
+    - Only progress Heartlek distance if:
+      - No next-day soreness (or "very mild" and fully resolving within 24 hr)
+      - No fatigue event triggered post-run
+      - Average pace during Heartlek stable or improving slightly
+      - No significant HR drift (>5 bpm increase without pace acceleration)
+    - Progression method:
+      - Add +0.5 to +1.0 km to Heartlek when criteria met
+      - Re-assess after each addition; regress if fatigue or dysfunction detected
+
+  event_linkage_policy:
+    - Log any fatigue, glycemic, or cognitive disruption events separately
+    - Reference event IDs in post_training_events field of session log
+
+  special_considerations:
+    - If training in heat (>22°C) or humidity (>70%), adjust MAF HR upwards by ~5 bpm
+    - Fasted runs allowed but must be tagged `MAF_fasted` and event susceptibility monitored
+    - Post-run carbohydrate replenishment advised if signs of substrate fatigue observed

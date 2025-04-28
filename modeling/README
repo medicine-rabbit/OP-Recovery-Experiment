@@ -1,0 +1,4 @@
+# Modeling
+
+Python scripts for analyzing processed session/event data.
+Includes SEI calculation, GAP analysis, fatigue event prediction models, etc.

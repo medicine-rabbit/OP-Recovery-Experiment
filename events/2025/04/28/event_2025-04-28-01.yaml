@@ -1,0 +1,19 @@
+event:
+  id: event_2025-04-28-01
+  date: 2025-04-28
+  time: 15:30
+  type: fatigue
+  severity: mild
+  trigger_activity: base_run
+  description: |
+    Mild fatigue ~30 min after slow base run at 126–128 bpm avg HR. No pre-run carbs. Reversed after consuming organic sugar.
+  physiological_signs:
+    - perceived_fatigue
+    - slight heaviness in legs
+  mitigation_actions:
+    - consumed_2tbsp_organic_sugar
+    - rested
+  resolution_status: resolved
+  resolution_time_min: 30
+  notes: |
+    Heat mild (20°C). Run performed slightly fasted (4 hr post-meal). HR drift minimal. Substrate depletion likely triggered fatigue.

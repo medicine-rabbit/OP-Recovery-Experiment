@@ -1,0 +1,27 @@
+training_session:
+  date: {{year}}-{{month}}-{{day}}
+  type: running
+  subtype: maf_z2_heartlek
+
+  maf_component:
+    distance_km: 5.0
+    target_hr_bpm: 127
+    avg_hr_bpm: {{avg_hr_bpm}}
+    split_hr_bpm:
+      - {{split1}}
+      - {{split2}}
+      - {{split3}}
+      - {{split4}}
+      - {{split5}}
+    avg_pace_min_per_km: {{maf_avg_pace}}
+    hr_drift_observed_bpm: {{maf_drift}}
+
+  z2_heartlek_component:
+    distance_km: {{z2_heartlek_distance}}
+    avg_hr_bpm: {{z2_avg_hr}}
+    avg_pace_min_per_km: {{z2_avg_pace}}
+    max_hr_bpm: {{z2_max_hr}}
+
+  post_training_events: []
+
+  subjective_feedback:

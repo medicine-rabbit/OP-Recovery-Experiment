@@ -1,8 +1,8 @@
 program_name: Aerobic Strides Base Phase
-specification_reference: aerobic_strides_specification.yaml
+specification_reference: specifications/aerobic_strides_specification.yaml
 description: |
   Adaptive aerobic neuromuscular conditioning phase using structured aerobic strides.
-  Progression based on physiological conditions, not preset calendar weeks.
+  Progression between stride distances is based on physiological conditions, not preset calendar weeks.
 
 phases:
   - phase_name: 60m Strides Phase
@@ -11,16 +11,17 @@ phases:
     target_stride_duration_seconds: 9
     post_stride_hr_zone_target: Z3
     progression_conditions:
-      - all post_stride_hr_spike values during a session must remain within Z3
-      - average_stride_duration_seconds must be ≤ 9 seconds
+      - All post_stride_hr_spike values during a session must remain within Zone 3.
+      - Average stride duration must be less than or equal to 9 seconds.
     notes: |
       Phase cannot progress to 80m until both HR zone and stride time targets are satisfied.
-      Targets may be eased if recovery or base condition requires adjustment.
+      Targets may be eased if needed during pre-experiment adaptation phase.
     post_session_intervention:
       type: NSDR
       timing_minutes_after_session: 60
       duration_minutes: 10-20
-      reasoning: "NSDR may maintain BDNF and CREB activity during the plasticity window."
+      reasoning: |
+        NSDR may maintain BDNF and CREB activity during the plasticity window following aerobic stimulation.
 
   - phase_name: 80m Strides Phase
     stride_distance_meters: 80
@@ -28,8 +29,8 @@ phases:
     target_stride_duration_seconds: 12
     post_stride_hr_zone_target: Z3
     progression_conditions:
-      - all post_stride_hr_spike values during a session must remain within Z3
-      - average_stride_duration_seconds must be ≤ 12 seconds
+      - All post_stride_hr_spike values during a session must remain within Zone 3.
+      - Average stride duration must be less than or equal to 12 seconds.
     notes: |
       Phase cannot progress to 100m until both HR zone and stride time targets are satisfied.
 
@@ -39,7 +40,25 @@ phases:
     target_stride_duration_seconds: 15
     post_stride_hr_zone_target: Z3
     progression_conditions:
-      - all post_stride_hr_spike values during a session must remain within Z3
-      - average_stride_duration_seconds must be ≤ 15 seconds
+      - All post_stride_hr_spike values during a session must remain within Zone 3.
+      - Average stride duration must be less than or equal to 15 seconds.
     notes: |
       Final aerobic strides phase before transition to anaerobic development.
+
+---
+
+# Simple NSDR Protocol (for protocols/nsdr_simple.yaml)
+
+protocol_name: NSDR Simple Recovery
+protocol_type: NSDR
+applicable_after: Aerobic Strides, Dual-Signal Days, or Cognitive Load Sessions
+description: |
+  Non-Sleep Deep Rest (NSDR) protocol designed to extend neuroplasticity consolidation following aerobic and neuromuscular training.
+steps:
+  - Find a quiet, dark space.
+  - Lay down comfortably with minimal external stimulation.
+  - Set a timer for 10 to 20 minutes.
+  - Perform relaxed breathing without guided visualization, or use a simple body scan technique.
+  - Goal is to enter a parasympathetic-dominant state without falling fully asleep.
+notes: |
+  NSDR may help sustain BDNF and CREB activation, support emotional regulation, and accelerate recovery after training.
