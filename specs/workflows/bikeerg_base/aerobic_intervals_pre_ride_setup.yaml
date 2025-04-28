@@ -1,0 +1,16 @@
+workflow:
+  name: aerobic_intervals_pre_ride_setup
+  purpose: "Ensure complete recording across PM5, ErgData, and Garmin ecosystems for BikeErg Base Ride sessions."
+  steps:
+    - "Connect HR strap to PM5 via Bluetooth"
+    - "Program ErgData for target intervals (e.g., 2x10:00, 90s rest)"
+    - "Start Garmin Indoor Cycling activity manually"
+    - "Wait for HR strap to connect to Garmin and stabilize HR signal"
+    - "Start ErgData activity"
+    - "Begin ride"
+notes: "Posted at BikeErg station as physical prompt to maintain operational fusion."
+tags:
+  - bikeerg
+  - base_ride
+  - fusion_protocol
+version: 1.0

@@ -1,0 +1,42 @@
+specification:
+  name: bikeerg_base_ride
+  description: >
+    Base aerobic BikeErg sessions targeting Zone 2 mitochondrial efficiency,
+    AMPK activation, and aerobic cardiac improvement (ACI↑).
+    Includes short intervals with steady-state Zone 2 pacing and controlled rest periods.
+
+workout_parameters:
+  type: interval
+  default_intervals:
+    - work: 10:00
+      rest: 90 sec
+    - repeat: 2x
+  intensity_target: Zone 2 (Garmin HR Zones)
+  optional_modifiers:
+    - rest_reduction: "Shorten rest to increase density as tolerated"
+    - cadence_target: "75–85 rpm steady"
+
+metrics_tracked:
+  - total_time
+  - total_distance_m
+  - avg_power_w
+  - avg_cadence_rpm
+  - avg_hr
+  - subjective_recovery
+  - training_tags
+
+workflow_dependencies:
+  - aerobic_intervals_pre_ride_setup
+
+tags:
+  - Z2
+  - AMPK+
+  - MITO+
+  - ACI↑
+  - REC+
+
+version: 1.0
+notes: >
+  This specification governs BikeErg aerobic rides focused on recovery, mitochondrial maintenance,
+  and progressive density loading. Future sessions may extend to 3x10:00, 2x15:00, or continuous
+  30:00 Zone 2 rides as capacity increases.
