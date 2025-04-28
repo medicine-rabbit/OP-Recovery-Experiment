@@ -97,3 +97,8 @@ derived_fields_calculations:
     avg_stryd_power[first stride] - avg_stryd_power[last stride]
 
 # Note: Progression metrics and phase advancement rules will be defined separately in the Program YAML, not here.
+
+version_control:
+  current_version: 1.0
+  changelog:
+    - v1.0: "Initial creation of specification."

@@ -40,3 +40,13 @@ notes: >
   This specification governs BikeErg aerobic rides focused on recovery, mitochondrial maintenance,
   and progressive density loading. Future sessions may extend to 3x10:00, 2x15:00, or continuous
   30:00 Zone 2 rides as capacity increases.
+
+
+version_control:
+  current_version: 1.0
+  changelog:
+    - v1.0: "Initial creation of specification."
+    # (Later you add lines like:)
+    # - v1.1: "Reduced rest intervals for density increase."
+    # - v1.2: "Added cadence target range."
+

@@ -51,3 +51,11 @@ owl_design:
         - condition: "if HRV_current > hrv_lower_threshold"
           then: "cold shower (2 min)"
         - supplements: ["Alpha-GPC", "Tart Cherry"]
+
+
+version_control:
+  current_version: 1.0
+  changelog:
+    - v1.0: "Initial creation of specification."
+
+

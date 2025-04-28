@@ -35,3 +35,13 @@ perceptron_integration:
   activation_multiplier: 1.0
   notes: |
     Each minute of open-ended modeling counts fully toward pathway stimulus time tracking.
+
+
+version_control:
+  current_version: 1.0
+  changelog:
+    - v1.0: "Initial creation of specification."
+    # (Later you add lines like:)
+    # - v1.1: "Reduced rest intervals for density increase."
+    # - v1.2: "Added cadence target range."
+
