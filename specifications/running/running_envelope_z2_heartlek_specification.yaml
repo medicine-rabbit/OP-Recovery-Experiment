@@ -11,12 +11,12 @@ specification:
   structure:
     - phase: Envelope_Run
       distance_km: 5.0  # initially matching MAF test distance
-      target_power_watts: {{maf_day1_avg_power}}
+      target_power_watts: {{maf_day1_garmin_avg_power}}
       acceptable_power_drift_watts: ±5  # Allowable deviation
       completion_criteria:
-        - maintain average power within ±5 watts of target
+        - maintain average Garmin power within ±5 watts of target
         - minimize HR drift across splits (<5 bpm preferred)
-        - maintain consistent pace or GAP without form degradation
+        - Adjust running form to get instantaneous Stryd power closer to Garmin power.
 
     - phase: Z2_Heartlek
       distance_km: variable
