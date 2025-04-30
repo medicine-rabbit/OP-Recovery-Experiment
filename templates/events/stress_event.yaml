@@ -1,0 +1,21 @@
+event:
+  id: event_{{timestamp}}
+  date: {{year}}-{{month}}-{{day}}
+  time: {{hh}}:{{mm}}
+  type: fatigue  # (fatigue, sleep_disruption, glycemic_crash, mental_stress, recovery_failure, etc.)
+  severity: mild  # (none, mild, moderate, severe)
+  trigger_activity: base_run  # (optional; link to training session type)
+  description: |
+    Brief description of what happened. For example:
+    "Mild fatigue ~30 minutes after base run. Sugar intake reversed symptoms."
+  physiological_signs:
+    - perceived_fatigue
+    - slight mental fog
+  mitigation_actions:
+    - consumed_2tbsp_sugar
+    - rested
+  resolution_status: resolved  # (resolved, partial, unresolved)
+  resolution_time_min: 30  # Estimated time to symptom improvement
+  notes: |
+    Any additional subjective or objective notes.
+    Include environment factors (heat, fasted, etc.) if known.

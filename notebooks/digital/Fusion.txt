@@ -1,0 +1,7 @@
+Fusion Error Legend
+
+ΔHRV missing = –1%
+
+No stride power data = –2%
+
+Cue misfire = –1%

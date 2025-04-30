@@ -1,10 +1,12 @@
-specification_name: Aerobic Strides
-
-description: |
-  Short, submaximal running strides performed within aerobic heart rate zones
-  to stimulate mitochondrial biogenesis, BDNF signaling, fast-twitch oxidative fiber recruitment,
-  and neuromuscular coordination, without significant lactate accumulation.
-  Session consists of multiple stride-walk cycles.
+specification_name:
+  name: Aerobic Strides
+  code: R-STR001
+  version: 1.0
+  description: |
+    Short, submaximal running strides performed within aerobic heart rate zones
+    to stimulate mitochondrial biogenesis, BDNF signaling, fast-twitch oxidative fiber recruitment,
+    and neuromuscular coordination, without significant lactate accumulation.
+    Session consists of multiple stride-walk cycles.
 
 constants:
   TARGET_100m_PACE: 15.0

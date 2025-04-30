@@ -1,0 +1,39 @@
+metadata:
+  sources:
+  - model_queue/garmin.fit
+  - model_queue/stryd.fit
+  merge_time: '2025-04-28T22:41:56.077407'
+data:
+  avg_heart_rate: 127.3
+  avg_power_garmin: 172.4
+  avg_power_stryd: 172.4
+  avg_respiration_rate: null
+  splits:
+  - avg_heart_rate: 127.3
+    avg_power_garmin: 172.4
+    avg_power_stryd: 172.4
+    avg_respiration_rate: null
+  - avg_heart_rate: 127.3
+    avg_power_garmin: 172.4
+    avg_power_stryd: 172.4
+    avg_respiration_rate: null
+  - avg_heart_rate: 127.3
+    avg_power_garmin: 172.4
+    avg_power_stryd: 172.4
+    avg_respiration_rate: null
+  - avg_heart_rate: 127.3
+    avg_power_garmin: 172.4
+    avg_power_stryd: 172.4
+    avg_respiration_rate: null
+  - avg_heart_rate: 127.3
+    avg_power_garmin: 172.4
+    avg_power_stryd: 172.4
+    avg_respiration_rate: null
+  - avg_heart_rate: 127.3
+    avg_power_garmin: 172.4
+    avg_power_stryd: 172.4
+    avg_respiration_rate: null
+  - avg_heart_rate: 127.3
+    avg_power_garmin: 172.4
+    avg_power_stryd: 172.4
+    avg_respiration_rate: null

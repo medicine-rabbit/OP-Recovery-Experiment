@@ -1,0 +1,44 @@
+Core Pathway Tags (Biological Target)
+
+| Tag       | Meaning                                                   |
+|-----------|-----------------------------------------------------------|
+| `AMPK+`   | Energy-sensing, fat oxidation, mitochondrial biogenesis   |
+| `MITO+`   | Mitochondrial density, aerobic base building              |
+| `mTOR+`   | Strength, hypertrophy, anabolic signaling                 |
+| `BDNF+`   | Neuroplasticity, coordination, cognitive repair           |
+| `CREB+`   | Memory formation, emotional regulation                    |
+| `AUTOPH+` | Autophagy, cellular repair, fasting response              |
+| `MAPK+`   | Pain modulation, inflammation buffering                   |
+| `IL6↓`    | Targeting IL-6 reduction or neuroimmune stabilization     |
+| `IGM↑`    | Sessions supporting immune restoration (long-term signal) |
+
+Training Effect Tags (Physiological Focus)
+
+| Tag      | Meaning                                               |
+|----------|-------------------------------------------------------|
+| `ACI↑`   | Aerobic Capacity Increase (VO₂max-related stimuli)    |
+| `AE↑`    | Aerobic Efficiency (improving pace/power at same HR)  |
+| `SEI→`   | Monitoring or improving System Efficiency Index       |
+| `GCT↓`   | Ground Contact Time reduction (mechanical sharpness)  |
+| `COORD↑` | Neuromotor coordination (e.g., mace, juggling)        |
+| `NPI↑`   | Neural Pattern Integration (post-stride BDNF priming) |
+
+Session Type Tags (Structural)
+
+| Tag | Meaning |
+|------------------------|---------------------------------------------------|
+| `Z1`, `Z2`, `Z3`, `Z4` | Predominant HR Zone                               |
+| `RECOV`                | Recovery-oriented session                         |
+| `STRIDE`               | Stride-based interval session                     |
+| `MAF`                  | MAF test session                                  |
+| `ENVELOPE`             | Run expanding aerobic envelope                    |
+| `DUAL`                 | Dual-signal day (2-session compounding effect)    |
+| `CASCADE`              | Part of a Cascade Pair (e.g., OWL + neuroplastic) |
+
+Optional Status Tags
+
+| Tag  | Meaning                              |
+|------|--------------------------------------|
+| `?`  | Suspected pathway but not confirmed  |
+| `↑↑` | Stronger than usual activation       |
+| `↓`  | Suppressed pathway or adverse signal |

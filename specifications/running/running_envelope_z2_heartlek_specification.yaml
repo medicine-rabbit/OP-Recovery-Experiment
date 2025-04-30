@@ -1,0 +1,42 @@
+specification:
+  name: running_envelope_z2_heartlek
+  code: R-ENV001
+  version: 1.0
+  description: |
+    Fixed-power aerobic run protocol based on maintaining mechanical power output
+    equivalent to Day 1 MAF test. Designed to improve mechanical economy at a set metabolic cost.
+    Followed by an optional Zone 2 Heartlek for aerobic system reinforcement.
+    Core focus is on mechanical efficiency expansion at known sub-threshold power outputs.
+
+  structure:
+    - phase: Envelope_Run
+      distance_km: 5.0  # initially matching MAF test distance
+      target_power_watts: {{maf_day1_avg_power}}
+      acceptable_power_drift_watts: ±5  # Allowable deviation
+      completion_criteria:
+        - maintain average power within ±5 watts of target
+        - minimize HR drift across splits (<5 bpm preferred)
+        - maintain consistent pace or GAP without form degradation
+
+    - phase: Z2_Heartlek
+      distance_km: variable
+      target_hr_ceiling_bpm: 137
+      progression_criteria:
+        - no post-run fatigue event
+        - no next-day soreness beyond very mild
+        - maintain or slightly improve avg pace at same HR
+
+  progression_logic:
+    - Progress Envelope_Run distance only if:
+      - Avg pace at target power improves by ≥1% across two sessions
+      - No significant HR drift
+    - Progress Heartlek distance gradually (0.5–1.0 km increments) if recovery and system stress metrics allow
+
+  event_linkage_policy:
+    - Log any fatigue, neuromuscular disruption, or glycemic events separately
+    - Reference event IDs in post_training_events field
+
+  special_considerations:
+    - If training in heat (>22°C) or high humidity (>70%), document conditions but do not adjust target power
+    - Fasted envelope runs are discouraged unless experimental; require separate tagging if done
+    - Post-run carbohydrate replenishment recommended if fatigue signals observed

@@ -1,5 +1,6 @@
 specification:
   name: MAF_Run_Z2_Heartlek
+  code: R-MAF001
   version: 1.0
   description: |
     Combined base run structure consisting of:

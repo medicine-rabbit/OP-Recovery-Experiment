@@ -1,0 +1,21 @@
+codes:
+  R-MAF001:
+    name: running_maf_z2_heartlek
+    specification: running/running_maf_z2_heartlek_specification.yaml
+    template: running/running_maf_z2_heartlek_template.yaml
+    description: |
+      5 km MAF heart rate controlled base run followed by optional Z2 heartlek.
+
+  R-ENV001:
+    name: running_envelope_z2_heartlek
+    specification: running/running_envelope_z2_heartlek_specification.yaml
+    template: running/running_envelope_z2_heartlek_template.yaml
+    description: |
+      Fixed-power aerobic economy run followed by optional Z2 heartlek.
+
+  R-STR001:
+    name: running_aerobic_strides
+    specification: running/running_aerobic_strides_specification.yaml
+    template: running/running_aerobic_strides_template.yaml
+    description: |
+      Neuromuscular and aerobic support strides with full aerobic recovery intervals.
