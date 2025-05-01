@@ -1,0 +1,19 @@
+title: What Every Computer Scientist Should Know About Floating-Point Arithmetic
+author: David Goldberg
+source: https://docs.oracle.com/cd/E19957-01/800-7895/800-7895.pdf
+date_accessed: 2025-04-30
+format: PDF
+type: Technical Paper
+summary: |
+  Classic paper on floating-point arithmetic explaining the IEEE standard,
+  common rounding errors, machine precision, and implications for software
+  design. Essential reading for understanding low-level numerical accuracy
+  issues in scientific computing and software development.
+tags: [IEEE754, floating_point, numerical_stability, computer_architecture]
+notes: |
+  - Introduces the need for floating-point standards across platforms.
+  - Discusses guard digits, rounding modes, and underflow/overflow behaviors.
+  - Examples show how naive assumptions lead to critical errors.
+  - Exception handling and performance considerations are emphasized.
+status: in_progress
+priority: high

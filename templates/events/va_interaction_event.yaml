@@ -1,0 +1,51 @@
+# Filename suggestion: abuse_log_2025-05-01.yaml
+
+event_id: VA-ABUSE-2025-05-01-001  # Unique identifier
+timestamp: 2025-05-01T14:20:00-04:00  # ISO 8601 format
+
+actor:
+  name: Jennifer Coleman
+  role: Suicide Prevention Coordinator
+  organization: Asheville VA Medical Center
+
+interaction_type: phone_call  # Options: phone_call, secure_message, letter, in_person, MyHealtheVet, other
+
+abuse_tags: [retaliation, psychological_abuse, obstruction]
+summary: >
+  During a suicide crisis triggered by institutional mistreatment, Jennifer Coleman told me “there is no hope.”
+  This statement directly worsened my emotional state and nearly led to fatal self-harm.
+
+response_effects:
+  physical:
+    heart_rate: elevated
+    grip_strength_change: -1.2  # kg, optional
+    stress_response: high  # subjective or sensor-based
+  psychological:
+    mood_impact: severe
+    suicidal_ideation: true
+    anxiety_level: 9  # 0–10 subjective scale
+  functional:
+    training_canceled: true
+    REM_suppression: true
+    notes: Skipped Dual-Signal Day session due to acute emotional collapse
+
+linked_metrics:
+  rem_sleep_duration: 00:46:00  # Format HH:MM:SS
+  hrv_baseline: 39
+  hrv_post_event: 30
+  garmin_stress_index: 71
+
+evidence:
+  - type: letter
+    description: March 24, 2025 VA denial letter
+    file_ref: letter_march_24_2025.jpg
+  - type: call_log
+    description: Time of call corroborated by phone record
+    file_ref: phone_log_apr18.png
+  - type: biometric
+    description: HRV and REM graphs logged in Garmin and notebook
+    file_ref: garmin_sleep_export_20250418.csv
+
+notes: >
+  This was one of the most dangerous interactions I’ve ever had with the VA. I am logging it formally
+  for inclusion in the OP Recovery dataset, evidence archive, and possible submission to oversight bodies.

@@ -8,6 +8,11 @@ specification:
     Followed by an optional Zone 2 Heartlek for aerobic system reinforcement.
     Core focus is on mechanical efficiency expansion at known sub-threshold power outputs.
 
+  power_logging_protocol:
+    garmin_screen_active: false
+    stryd_screen_active: true
+    notes: "Removed Stryd screen after run to preserve Garmin power for next session"
+
   structure:
     - phase: Envelope_Run
       distance_km: 5.0  # initially matching MAF test distance

@@ -3,9 +3,11 @@ import yaml
 import pandas as pd
 from fitparse import FitFile
 from datetime import datetime
+import pathlib
+from pathlib import Path
 
 def parse_fit_file(filepath, prefix=None):
-    fitfile = FitFile(filepath)
+    fitfile = FitFile(str(filepath))
     records = []
 
     for record in fitfile.get_messages('record'):
@@ -43,6 +45,9 @@ def unify_run(garmin_fit_path, stryd_fit_path):
         suffixes=('', '_stryd'),
         direction='nearest'
     )
+
+    print("Available columns in merged_df:", list(merged_df.columns))
+
 
     # 4. Compute Session Averages
     avg_hr = float(merged_df['garmin_heart_rate'].mean()) if 'garmin_heart_rate' in merged_df else None
@@ -83,6 +88,15 @@ def unify_run(garmin_fit_path, stryd_fit_path):
     timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
     return unified_data, timestamp
 
+def convert_paths(obj):
+    if isinstance(obj, dict):
+        return {k: convert_paths(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_paths(i) for i in obj]
+    elif isinstance(obj, pathlib.Path):
+        return str(obj)
+    return obj
+
 def save_unified_data(unified_data, timestamp):
     year = datetime.today().strftime('%Y')
     month = datetime.today().strftime('%m')
@@ -92,9 +106,38 @@ def save_unified_data(unified_data, timestamp):
     filepath = os.path.join(save_dir, f"{timestamp}_unified_run.yaml")
 
     with open(filepath, 'w') as f:
-        yaml.dump(unified_data, f, sort_keys=False)
+        unified_data_cleaned = convert_paths(unified_data)
+        yaml.dump(convert_paths(unified_data), f, sort_keys=False)
 
     print(f"Saved unified run data to {filepath}.")
 
+def main():
+    model_queue = Path("model_queue")
+    garmin_file = model_queue / "garmin.fit"
+    stryd_file = model_queue / "stryd.fit"
+
+    if not garmin_file.exists() or not stryd_file.exists():
+        print("❌ Missing one or both .fit files in model_queue/")
+        return
+
+    # Import and call your existing parser here
+    unified_data, timestamp = unify_run(garmin_file, stryd_file)
+
+
+    # Save output
+    now = datetime.now()
+    out_dir = Path(f"data/{now.year}/{now:%m-%b}/{now:%d}")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    filename = now.strftime("%Y%m%d%H%M%S") + "_unified_run.yaml"
+    output_path = out_dir / filename
+
+    with open(output_path, "w") as f:
+        yaml.dump(convert_paths(unified_data), f, sort_keys=False)
+
+
+
+    print(f"✅ Unified run data saved to: {output_path}")
+
+
 if __name__ == "__main__":
-    print("This module is intended to be imported, not run directly.")
+    main()
