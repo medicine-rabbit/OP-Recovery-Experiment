@@ -1,0 +1,35 @@
+# Filename suggestion: abuse_log_2025-05-01.yaml
+
+event_id: VA-ABUSE-2025-05-01-001  # Unique identifier
+timestamp: 2025-05-01T14:20:00-1:00  # Letter recieved around 6pm
+
+actor:
+  name: James W. Dudley
+  role: Acting Executive Director
+  organization: Asheville VA Medical Center
+
+interaction_type: letter  # Options: phone_call, secure_message, letter, in_person, MyHealtheVet, other
+
+response_effects:
+  physical:
+    heart_rate: elevated
+    stress_response: moderate # Garmin stress scores substantially higher. Data in log. # ruminating thoughts from the PTSD the Asheville VA.
+  psychological:
+    mood_impact: high
+    suicidal_ideation: false
+    anxiety_level: 8 # 0-10 scale
+  functional:
+    training_canceled: false
+    REM_suppression: to be determined
+    note: read letter after [AMPK+][MITO+] training.
+
+abuse_tags: [retaliation, psychological_abuse, obstruction]
+summary: >
+  This letter failed to respond to any allegations or to restore my ER access Asheville VA illegally withholds by sending lies to area hospitals denying my immune deficiency and explaining away the topiramate reactions as "atopic dermatitis", which I do not have. Similarly, they lied in my records to indicate I was "diagnosed with asthma as a child", which is a lie, to explain the topiramate TEN effect in lungs, ears, etc.
+
+  I am logging it formally
+  for inclusion in the OP Recovery dataset, evidence archive, and possible submission to oversight bodies.
+
+
+
+
