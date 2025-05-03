@@ -1,0 +1,36 @@
+date: "{{year}}-{{month}}-{{day}}"
+type: running
+subtype: aerobic_strides
+session_id:
+
+warmup_component:
+  duration_min: "{{warmup_duration}}"
+  notes: |
+      "{{warmup_notes}}"
+
+strides_component:
+  number_of_strides: "{{number_of_strides}}"
+  stride_distance_m: "{{stride_distance_meters}}"
+  stride_targets:
+  max_hr_bpm: "{{stride_max_hr_bpm}}"
+  max_respiration_rate_bpm: "{{stride_max_rr_bpm}}"
+  target_stride_time_sec: "{{target_stride_time}}"
+  stride_data:
+    avg_stride_hr_bpm: "{{avg_stride_hr_bpm}}"
+    avg_stride_pace_min_per_km: "{{avg_stride_pace}}"
+    avg_stride_power_watts: "{{avg_stride_power}}"
+    avg_stride_duration_sec: "{{avg_stride_duration}}"
+
+recovery_component:
+  avg_recovery_duration_sec: "{{avg_recovery_duration}}"
+  recovery_hr_floor_bpm: "{{recovery_hr_floor_bpm}}"
+
+post_training_events: []
+
+subjective_feedback:
+  perceived_effort_rpe: "{{rpe}} " # scale 1–10
+  soreness_next_day: "{{soreness_level}}" # none, very_mild, mild, moderate, severe
+  fatigue_event_occurred: "{{fatigue_event}}"  # yes/no
+  notes: |
+      "{{notes}}"
+

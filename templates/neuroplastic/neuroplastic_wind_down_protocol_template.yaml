@@ -1,0 +1,52 @@
+date: 2025-05-02
+title: neuroplastic_wind_down_protocol
+session_id: neuroplastic_wind_down_protocol-2025-05-01
+
+
+time: 23:00
+duration: 10:01 # minutes of juggling, not including breath regulation
+
+procedure: "Juggle for 10 minutes, followed by breath regulation"
+implementation: "x3 juggling bags, 4 ounces"
+stimulus_type: neuroplastic_wind_down
+
+cognitive_motor_integration:
+  juggling: 10:00 # minutes
+  number_of_bags: 3
+  sleepphones: yes
+  audio: "alpha wave binaural beats (8-12 hz)"
+  reflection: "repititions increased slightly from yesterday"
+
+breath_regulation:
+  breath_exercise: "prana breath"
+  sleepphones: yes
+  audio: "alpha wave binaural beats (8-12 hz)"
+
+environment:
+  lighting: low
+
+tracking_fields:
+  bdnf_activation: possible
+  stress_downshift: yes
+  sleep_epectation: REM+
+
+modifiers:
+  lavender_used: false
+  cat_present: true
+
+tags:
+  - BDNF+
+  - CNS↑
+
+version: 1.1
+version_notes:
+  - timestamp: 2025-05-02T18:34:00
+    reason: grip strength increased following juggling protocol
+    updated_fields:
+      tags: ["bdnf?"] → ["bdnf+"]
+    linked_events:
+      - session_id: morning_entry_2025-05-02
+      - biomarker: grip_strength
+        value: 53.1
+
+
