@@ -1,36 +1,177 @@
-date: "{{year}}-{{month}}-{{day}}"
+date: 2025-04-29
 type: running
 subtype: aerobic_strides
-session_id:
+session_id: running_aerobic_strides_2025-04-29
 
 warmup_component:
-  duration_min: "{{warmup_duration}}"
+  duration_min: 5
   notes: |
-      "{{warmup_notes}}"
+      "easy"
 
 strides_component:
-  number_of_strides: "{{number_of_strides}}"
-  stride_distance_m: "{{stride_distance_meters}}"
-  stride_targets:
-  max_hr_bpm: "{{stride_max_hr_bpm}}"
-  max_respiration_rate_bpm: "{{stride_max_rr_bpm}}"
-  target_stride_time_sec: "{{target_stride_time}}"
+  number_of_strides: 8
+  stride_distance: 60 # m
+  recovery_hr: 114 # bpm
+  stride_goals:
+    goal_stride_time_sec: 10 # seconds
+    goal_peak_hr: 149 # bpm
+    goal_recovery_time: 60 # seconds
+    goal_lcr: 0.583 # (goal_peak_hr - recovery_hr) / goal_recovery_time = (149-114)/60
   stride_data:
-    avg_stride_hr_bpm: "{{avg_stride_hr_bpm}}"
-    avg_stride_pace_min_per_km: "{{avg_stride_pace}}"
-    avg_stride_power_watts: "{{avg_stride_power}}"
-    avg_stride_duration_sec: "{{avg_stride_duration}}"
+    avg_stride_time: 12.5 # sec
+    avg_stride_garmin_power: 407 # W
+    avg_stride_stryd_power: 325.875 # W
+    avg_recovery_duration: 171.6 # sec
+    avg_stride_rss: 1
 
-recovery_component:
-  avg_recovery_duration_sec: "{{avg_recovery_duration}}"
-  recovery_hr_floor_bpm: "{{recovery_hr_floor_bpm}}"
+
+results:
+  - stride_1:
+      stride_index: 1
+      time: 12.7 # sec
+      max_pace: 2:52 # min/km
+      avg_pace: 3:32 # min/km
+      garmin_power: 329 # W
+      stryd_power: 268 # W
+      recovery_hr: 114 # bpm
+      recovery_time: 66 # sec
+      peak_hr: 140 # bpm
+      lactate_clearance_rate: 0.39 # delta_bpm/sec
+      lcr_error: 0.193 # (goal_lcr - lcr)
+      hr_peak_error: -9 # bpm
+      speed_error: -2.7 # sec
+      stride_rss: 1
+  - stride_2:
+      stride_index: 2
+      time: 11.9 # sec
+      max_pace: 2:37 # min/km
+      avg_pace: 3:18 # min/km
+      garmin_power: 343 # W
+      stryd_power: 279 # W
+      recovery_hr: 114 # bpm
+      recovery_time: 94 # sec
+      peak_hr: 149 # bpm
+      lactate_clearance_rate: 0.37 # delta_bpm/sec
+      lcr_error: 0.213 # (goal_lcr - lcr)
+      hr_peak_error: 0 # bpm
+      speed_error: 1.9 # sec
+      stride_rss: 1
+  - stride_3:
+      stride_index: 3
+      time: 12.8 # sec
+      max_pace: 2:41 # min/km
+      avg_pace: 3:34 # min/km
+      garmin_power: 445 # W
+      stryd_power: 272 # W
+      recovery_hr: 114 # bpm
+      recovery_time: 124 # sec
+      peak_hr: 149 # bpm
+      lactate_clearance_rate: 0.28 # delta_bpm/sec
+      lcr_error: 0.303 # (goal_lcr - lcr)
+      hr_peak_error: 0 # bpm
+      speed_error: 2.8 # sec
+      stride_rss: 1
+  - stride_4:
+      stride_index: 4
+      time: 12.6 # sec
+      max_pace: 2:59 # min/km
+      avg_pace: 3:31 # min/km
+      garmin_power: 331 # W
+      stryd_power: 274 # W
+      recovery_hr: 114 # bpm
+      recovery_time: 181 # sec
+      peak_hr: 154 # bpm
+      lactate_clearance_rate: 0.22 # delta_bpm/sec
+      lcr_error: 0.363 # (goal_lcr - lcr)
+      hr_peak_error: 5 # sec
+      speed_error: 2.6 # sec
+      stride_rss: 1
+  - stride_5:
+      stride_index: 5
+      time: 14.0 # sec
+      max_pace: 3:12 # min/km
+      avg_pace: 3:53 # min/km
+      garmin_power: 296 # W
+      stryd_power: 280 # W
+      recovery_hr: 114 # bpm
+      recovery_time: 257 # sec
+      peak_hr: 153 # bpm
+      lactate_clearance_rate: 0.15 # delta_bpm/sec
+      lcr_error: 0.433 # (goal_lcr - lcr)
+      hr_peak_error: 4 # bpm
+      speed_error: 4 # sec
+      stride_rss: 1
+  - stride_6:
+      stride_index: 6
+      time: 12.1 # sec
+      max_pace: 2:31 # min/km
+      avg_pace: 3:21 # min/km
+      garmin_power: 383 # W
+      stryd_power: 293 # W
+      recovery_hr: 114 # bpm
+      recovery_time: 244 # sec
+      peak_hr: 152 # bpm
+      lactate_clearance_rate: 0.16 # delta_bpm/sec
+      lcr_error: 0.423 # (goal_lcr - lcr)
+      hr_peak_error: 3 # bpm
+      speed_error: 2.1 # sec
+      stride_rss: 1
+  - stride_7:
+      stride_index: 7
+      time: 12.2 # sec
+      max_pace: 2:53 # min/km
+      avg_pace: 3:24 # min/km
+      garmin_power: 389 # W
+      stryd_power: 298 # W
+      recovery_hr: 114 # bpm
+      recovery_time: 236 # sec
+      peak_hr: 156 # bpm
+      lactate_clearance_rate: 0.24 # delta_bpm/sec
+      lcr_error: 0.343 # (goal_lcr - lcr)
+      hr_peak_error: 7 # bpm
+      speed_error: 2.2 # sec
+      stride_rss: 1
+  - stride_8:
+      stride_index: 8
+      time: 12.0 # sec
+      max_pace: 2:33 # min/km
+      avg_pace: 3:20 # min/km
+      garmin_power: 384 # W
+      stryd_power: 360 # W
+      recovery_hr: 114 # bpm
+      recovery_time: 171 # sec
+      peak_hr: 154 # bpm
+      lactate_clearance_rate: 0.255 # delta_bpm/sec
+      lcr_error: 0.353 # (goal_lcr - lcr)
+      hr_peak_error: 5 # bpm
+      speed_error: 2.0 # sec
+      stride_rss: 1
+
+fatigue_metrics:
+  total_rss: 33
+  avg_stride_rss: 1
+  recovery_rss: 25 # total_rss - total_stride_rss
+  stimulus_to_fatigue_ratio_stride:
+    method: avg_stride_time_div_avg_stride_rss
+    sfr_stride: 12.5
+  stimulus_to_fatigue_ratio_lactate:
+    method: total_recovery_time_min_div_avg_revovery_rss
+    sfr_lactate: 1.425
+  stimulus_to_fatigue_ratio_run:
+    method: effective_zone_2_time_min_squared_div_total_rss
+    sfr_run: 16.46
+
+hr_zones:
+  zone_2: 23.26 # minutes
+  zone_3: 6.56 # minutes
+  zone_4: 0.016 # minutes
 
 post_training_events: []
 
 subjective_feedback:
-  perceived_effort_rpe: "{{rpe}} " # scale 1–10
-  soreness_next_day: "{{soreness_level}}" # none, very_mild, mild, moderate, severe
-  fatigue_event_occurred: "{{fatigue_event}}"  # yes/no
+  perceived_effort_rpe: 8.5 # scale 1–10
+  soreness_next_day: mild # none, very_mild, mild, moderate, severe
+  fatigue_event_occurred: no # yes/no
   notes: |
-      "{{notes}}"
+      None
 

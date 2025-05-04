@@ -1,0 +1,25 @@
+date: 2025-05-02
+title: morning_entry
+session_id: morning_entry_2025-05-02
+
+grip: 53.4 # kg
+REM: 61 # min
+HRV: 32 # ms
+mood: "stable"
+dream: "I remember having a dream but do not remember details."
+
+animal_interaction:
+  pet: Hito
+  location: bed
+  duration: ~03:45
+  effect_on_sleep:
+    latency: decreased (still over 1h)
+    REM: possibly improved
+  notes: "Hito (cat) remained on bed until around 03:45; presence may have reduced hypervigilance and supported limbic calm."
+
+notes:
+  - "0.3 kg increase in grip strenth, slight rebound in HRV (though still below my baseline), and increased REM sleep indicate recovery ride had some effect."
+  - "Increased REM may be attributed to stopping 5-HTP and L-trytophan two days ago."
+  - "Increased REM may also be attributed to cat sleeping on bed."
+
+

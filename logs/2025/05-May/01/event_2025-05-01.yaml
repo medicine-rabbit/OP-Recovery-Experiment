@@ -1,0 +1,16 @@
+date: 2025-05-01
+title: supplement_change
+event_id: event_2025-05-01
+
+type: supplement_change
+
+supplements_changed:
+  - name: "5-HTP"
+    status: stopped
+  - name: "L-tryptophan"
+    status: stopped
+
+reason: "Suspected suppression of REM sleep and interference with neuroimmune recovery"
+hypothesis: >
+  Discontinuation may reduce IL-6–linked REM suppression and improve
+  BDNF-linked recovery markers such as grip strength and sleep architecture.

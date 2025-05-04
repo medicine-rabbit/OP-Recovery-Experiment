@@ -1,0 +1,98 @@
+date: 2025-05-03
+session: OWL
+session_id: owl_2025-05-03
+
+time: 14:19
+duration: 52:23 # minutes
+
+preload_indicators:
+  grip_delta: +0.3 kg
+  rem_delta: +15 min
+  hrv_pre: 50 ms
+  hrv_post: 35 ms
+  neural_drive: good
+
+movements:
+  - pause_jerk:
+      note: |
+        use as a warm-up to split jerks
+      expected:
+        rpe: 7.0
+        sets: 2
+        reps: 2
+      actual:
+        - reps: 2
+          weight: 40
+        - reps: 2
+          weight: 45
+        - reps: 2
+          weight: 50
+        - reps: 2
+          weight: 50
+  - split_jerk_pause_in_split:
+      expected:
+        rpe: 8.0
+        sets: 4
+        reps: 1
+      actual:
+        - reps: 1
+          weight: 55
+        - reps: 1
+          weight: 60
+        - reps: 2
+          weight: 65
+        - reps: 2
+          weight: 65
+        - reps: 2
+          weight: 65
+        - reps: 2
+          weight: 65
+  - front_squat:
+      expected:
+        rpe: 8.0
+        sets: 4
+        reps: 2
+      actual:
+        - reps: 2
+          weight: 50
+        - reps: 2
+          weight: 55
+        - reps: 2
+          weight: 60
+        - reps: 2
+          weight: 60
+        - reps: 2
+          weight: 60
+        - reps: 2
+          weight: 60
+
+
+stimulus_to_fatigue_ratio:
+  method: sqrt_volume_div_epoc
+  total_volume: 1435  # kg
+  epoc: 5
+  sfr_owl: 7.58
+
+post_session_interventions:
+  - Tart Cherry 20g
+  - Choline Bitartrate
+  - 30g protein
+
+pre_session_biometrics:
+  hrv: 50  # ms
+  respiration_rate: 15  # breaths per minute
+
+post_session_biometrics:
+  hrv: 35  # ms
+  respiration_rate: 18  # breaths per minute
+
+modifiers:
+  grip_challenged: true
+  tech_focus: true
+
+tags:
+  - MTOR+
+  - TECH+
+  - GRIP+
+  - RPE_8.0
+

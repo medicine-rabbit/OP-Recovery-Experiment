@@ -4,60 +4,78 @@ title: OWL
 time: 16:17
 duration: 52:52 # minutes
 
-procedure:
-  - Snatch_Pause_Below_Knee: 4x2 @ RPE 7.5
-  - Power_Clean_Hold_Catch_Then_Front_Squat: 3x2 @ 7.5
-  - Snatch_Pull: 3x3 @ RPE 8.0
 
-results:
-  - movement: snatch_pause_below_knee
-    sets:
-      - reps: 2
-        weight: 28
-      - reps: 2
-        weight: 30
-      - reps: 2
-        weight: 33
-      - reps: 2
-        weight: 33
-      - reps: 2
-        weight: 33
-      - reps: 2
-        weight: 33
-  - movement: power_clean_hold_catch_then_front_Squat
-    sets:
-      - reps: 1
-        weight: 33
-      - reps: 1
-        weight: 40
-      - reps: 2
-        weight: 40
-      - reps: 2
-        weight: 45
-      - reps: 2
-        weight: 45
-      - reps: 2
-        weight: 45
-  - movement: snatch_pull
-    sets:
-      - reps: 1
-        weight: 50
-      - reps: 1
-        weight: 55
-      - reps: 2
-        weight: 60
-      - reps: 3
-        weight: 65
-      - reps: 3
-        weight: 70
-      - reps: 3
-        weight: 70
-      - reps: 3
-        weight: 70
+preload_indicators:
+  grip_delta: +0.1 kg
+  rem_delta: +4 min
+  hrv_pre: 42 # ms
+  hrv_post: 28 # ms
+  neural_drive: good
+
+movements:
+  - snatch_pause_below_knee:
+      expected:
+        rpe: 7.5
+        sets: 4
+        reps: 2
+      actual:
+        - reps: 2
+          weight: 28
+        - reps: 2
+          weight: 30
+        - reps: 2
+          weight: 33
+        - reps: 2
+          weight: 33
+        - reps: 2
+          weight: 33
+        - reps: 2
+          weight: 33
+  - power_clean_hold_catch_then_front_Squat:
+      expected:
+        rpe: 7.5
+        sets: 3
+        reps: 2
+      actual:
+        - reps: 1
+          weight: 33
+        - reps: 1
+          weight: 40
+        - reps: 2
+          weight: 40
+        - reps: 2
+          weight: 45
+        - reps: 2
+          weight: 45
+        - reps: 2
+          weight: 45
+  - snatch_pull:
+      expected:
+        rpe: 8.0
+        sets: 3
+        reps: 3
+      actual:
+        - reps: 1
+          weight: 50
+        - reps: 1
+          weight: 55
+        - reps: 2
+          weight: 60
+        - reps: 3
+          weight: 65
+        - reps: 3
+          weight: 70
+        - reps: 3
+          weight: 70
+        - reps: 3
+          weight: 70
+
 
 stimulus_to_fatigue_ratio:
-  epoc_kcal: 22
-  sfr_epoc_based: 22
+  method: sqrt_volume_div_epoc
+  total_volume: 1853  # kg
+  epoc: 22
+  sfr_owl: 1.957
 
 
 post_session_interventions:
