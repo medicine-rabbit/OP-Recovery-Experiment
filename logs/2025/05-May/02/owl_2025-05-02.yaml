@@ -1,81 +1,78 @@
+session_id: owl_2025-05-02
 date: 2025-05-02
-title: OWL
-
-time: 16:17
+type: OWL
+time_start: 16:17
 duration: 52:52 # minutes
 
 
 preload_indicators:
+  bodyweight: 80.3
   grip_delta: +0.1 kg
   rem_delta: +4 min
   hrv_pre: 42 # ms
   hrv_post: 28 # ms
   neural_drive: good
 
-movements:
-  - snatch_pause_below_knee:
-      expected:
-        rpe: 7.5
-        sets: 4
-        reps: 2
-      actual:
-        - reps: 2
-          weight: 28
-        - reps: 2
-          weight: 30
-        - reps: 2
-          weight: 33
-        - reps: 2
-          weight: 33
-        - reps: 2
-          weight: 33
-        - reps: 2
-          weight: 33
-  - power_clean_hold_catch_then_front_Squat:
-      expected:
-        rpe: 7.5
-        sets: 3
-        reps: 2
-      actual:
-        - reps: 1
-          weight: 33
-        - reps: 1
-          weight: 40
-        - reps: 2
-          weight: 40
-        - reps: 2
-          weight: 45
-        - reps: 2
-          weight: 45
-        - reps: 2
-          weight: 45
-  - snatch_pull:
-      expected:
-        rpe: 8.0
-        sets: 3
-        reps: 3
-      actual:
-        - reps: 1
-          weight: 50
-        - reps: 1
-          weight: 55
-        - reps: 2
-          weight: 60
-        - reps: 3
-          weight: 65
-        - reps: 3
-          weight: 70
-        - reps: 3
-          weight: 70
-        - reps: 3
-          weight: 70
+procedure:
+  - movement: snatch
+    rpe: 7.5
+    sets: 4
+    reps: 2
+    note: |
+      pause below the knee
+    neural_drive_factor: 1.0
+    pause: true
 
+  - movement: power_clean_then_front_Squat:
+    rpe: 7.5
+    sets: 3
+    reps: 2
+    note: |
+      hold catch
+    neural_drive_factor: 0.8
+    pause: true
+
+  - movement: snatch_pull
+    rpe: 8.0
+    sets: 3
+    reps: 3
+    neural_drive_factor: 0.8
+    pause: false
+
+results:
+  - movement: snatch
+    weights: [28,30,33,33,33,33]
+    reps: [2, 2, 2, 2, 2, 2]
+
+  - movement: power_clean_then_front_Squat
+    weights: [33, 40, 40, 45, 45, 45]
+    reps: [1, 1, 2, 2, 2, 2]
+
+  - movement: snatch_pull
+    weights: [50, 55, 60, 65, 70, 70, 70]
+    reps: [1, 1, 2, 3, 3, 3, 3]
+
+
+F2_stimulus:
+  - movement: snatch
+    neuromechanical_impulse_load: 380 # kilograms (kg); Σ (reps × sets × weight × neural_drive_factor)
+  - movement: power_clean_then_front_Squat
+    neuromechanical_impulse_load: 338 # kilograms (kg); Σ (reps × sets × weight × neural_drive_factor)
+  - movement: snatch_pull
+    neuromechanical_impulse_load: 840 # kilograms (kg); Σ (reps × sets × weight × neural_drive_factor)
+
+total_neuromechanical_impulse_load: 1558 # kilograms (kg); Σ (neuromechanical_impulse_load)
+total_neuromechanical_impulse_load_per_kg: 19.4 # = total_neuromechanical_impulse_load / bodyweight
+
+positional_total_kg: 802 # # kilograms (kg); Σ (reps × sets × weight), where movement has pause=true
 
 stimulus_to_fatigue_ratio:
   method: sqrt_volume_div_epoc
   total_volume: 1853  # kg
   epoc: 22
   sfr_owl: 1.957
+  sfr_neuromechanical_impulse: 1.79
+  sfr_position: 1.29
 
 
 post_session_interventions:
@@ -98,5 +95,5 @@ tags:
   - MTOR+
   - TECH+
   - GRIP+
-  - RPE_7.5
+  - RPE_8.0
 

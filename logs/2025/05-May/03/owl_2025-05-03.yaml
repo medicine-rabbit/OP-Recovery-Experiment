@@ -1,90 +1,75 @@
+session_id: owl-2025-05-03
 date: 2025-05-03
-session: OWL
-session_id: owl_2025-05-03
+type: OWL
+time_start: 14:19
+duration: 52:23  # minutes (min)
 
-time: 14:19
-duration: 52:23 # minutes
+metadata:
+  bodyweight: 80.4 # kilgrams (kg)
+  hrv_pre: 50 # miliseconds (ms)
+  hrv_post: 35 # # miliseconds (ms)
+  hrv_lower_baseline: 33 # miliseconds (ms)
+  grip_delta: +0.3 # kilograms (kg)
+  rem_delta: +15 # minutes (min)
+  mood: stressed
 
-preload_indicators:
-  grip_delta: +0.3 kg
-  rem_delta: +15 min
-  hrv_pre: 50 ms
-  hrv_post: 35 ms
-  neural_drive: good
+procedure:
+  - movement: pause_jerk
+    rpe: 7.0
+    sets: 2
+    reps: 2
+    note: |
+      use as a warm-up to split jerks
 
-movements:
-  - pause_jerk:
-      note: |
-        use as a warm-up to split jerks
-      expected:
-        rpe: 7.0
-        sets: 2
-        reps: 2
-      actual:
-        - reps: 2
-          weight: 40
-        - reps: 2
-          weight: 45
-        - reps: 2
-          weight: 50
-        - reps: 2
-          weight: 50
-  - split_jerk_pause_in_split:
-      expected:
-        rpe: 8.0
-        sets: 4
-        reps: 1
-      actual:
-        - reps: 1
-          weight: 55
-        - reps: 1
-          weight: 60
-        - reps: 2
-          weight: 65
-        - reps: 2
-          weight: 65
-        - reps: 2
-          weight: 65
-        - reps: 2
-          weight: 65
-  - front_squat:
-      expected:
-        rpe: 8.0
-        sets: 4
-        reps: 2
-      actual:
-        - reps: 2
-          weight: 50
-        - reps: 2
-          weight: 55
-        - reps: 2
-          weight: 60
-        - reps: 2
-          weight: 60
-        - reps: 2
-          weight: 60
-        - reps: 2
-          weight: 60
+  - movement: split_jerk
+    pause: split
+    rpe: 8.0
+    sets: 4
+    reps: 1
+
+  - movement: front_squat
+    rpe: null
+    sets: 4
+    reps: 2
 
 
-stimulus_to_fatigue_ratio:
-  method: sqrt_volume_div_epoc
-  total_volume: 1435  # kg
-  epoc: 5
-  sfr_owl: 7.58
+results:
+  - movement: pause_jerk
+    weights: [40, 45, 50, 50]
+    reps: [2, 2, 2, 2]  # matched plan
+    neural_drive_factor: 1.0
+
+  - movement: split_jerk
+    weights: [55, 60, 65, 65, 65, 65]
+    reps: [1, 1, 2, 2, 2, 2]  # matched plan
+    neural_drive_factor: 1.0
+
+  - movement: front_squat
+    weights: [50, 55, 60, 60, 60, 60]
+    reps: [2, 2, 2, 2, 2, 2]
+    neural_drive_factor: 0.0 # not explosive
+
+
+F2_stimulus:
+  - movement: pause_jerk
+    neuromechanical_impulse_load: 370 # kilograms (kg); Σ (reps × sets × weight × neural_drive_factor)
+  - movement: split_jerk
+    neuromechanical_impulse_load: 635 # kilograms (kg); Σ (reps × sets × weight × neural_drive_factor)
+
+total_neuromechanical_impulse_load: 1005 # kilograms (kg); Σ (neuromechanical_impulse_load)
+total_neuromechanical_impulse_load_per_kg: 12.5 # = total_neuromechanical_impulse_load / bodyweight
+
+metrics:
+  total_volume: 902  # kg
+  epoc: 41
+  sfr_owl: 0.73
+  sfr_neuromechanical_impulse: 0.77
 
 post_session_interventions:
-  - Tart Cherry 20g
-  - Choline Bitartrate
-  - 30g protein
+  - tart_cherry
+  - choline_bitartrate
+  - protein_30g
 
-pre_session_biometrics:
-  hrv: 50  # ms
-  respiration_rate: 15  # breaths per minute
-
-post_session_biometrics:
-  hrv: 35  # ms
-  respiration_rate: 18  # breaths per minute
 
 modifiers:
   grip_challenged: true
@@ -95,4 +80,3 @@ tags:
   - TECH+
   - GRIP+
   - RPE_8.0
-

@@ -1,0 +1,88 @@
+session_id: owl-2025-05-04
+date: 2025-05-05
+type: OWL Accessories
+time_start: 16:59
+duration: 38:15  # min
+
+metadata:
+  bodyweight: 81.0 # kilograms (kg)
+  hrv_pre: null
+  hrv_post: null
+  hrv_lower_baseline: null
+  grip_delta: -0.9 # kilograms (kg)
+  rem_delta: -48 # minutes (min)
+  mood: stable
+  note: "Sleep was divided and Garmin seemed to have not recordd REM in second sleep"
+
+procedure:
+  - movement: dip_hold
+    rpe: 5.0
+    sets: 3
+    reps: 3
+    pause: true
+    stability: true
+    difficulty: 0.1
+    neural_drive_factor: 0.01
+    note: "Use as a warm-up to push presses"
+
+  - movement: push_press
+    rpe: 6
+    sets: 5
+    reps: 5
+    note: "focus on speed of the bar"
+    pause: false
+    stability: false
+    difficulty: 0.1
+    neural_drive_factor: 0.6
+
+  - movement: barbell_calf_raise
+    rpe: null
+    sets: 3
+    reps: 20
+    pause: false
+    stability: true
+    difficulty: 0.1
+    neural_drive_factor: 0.01
+    note: "hold bar in front rack position; focus on alignment and balance"
+
+
+results:
+  - movement: dip_hold
+    weights: [40, 40, 40]
+    reps: [3, 3, 3]  # matched plan
+    volume: 360 # kilograms (kg)
+    note: "could have gone heavier"
+
+  - movement: push_press
+    weights: [42, 42, 42, 42, 42]
+    reps: [5, 5, 5, 5, 5]  # matched plan
+    volume: 1050 # kilgrams (kg)
+
+
+  - movement: barbell_calf_raise
+    weights: [20, 20, 20]
+    reps: [20, 20,20]
+    volume: 1200 # kilgrams (kg)
+
+F2_stimulus:
+  - movement: push_press
+    neuromechanical_impulse_load: 630 # kilograms (kg); Σ (reps × sets × weight × neural_drive_factor)
+
+
+total_neuromechanical_impulse_load: 630 # kilograms (kg); Σ (neuromechanical_impulse_load)
+total_neuromechanical_impulse_load_per_kg: 7.7 # = total_neuromechanical_impulse_load / bodyweight
+
+metrics:
+  total_volume: 2610  # kg
+  stimulus_stability: 156 # kilograms, adjusted (kg); Σ (reps × sets × weight × difficulty), where stability=true
+  stimulus_position: 36 # kilograms, adjusted (kg); Σ (reps × sets × weight × difficulty), where position=true
+  stimulus_neuromechanical_impulse: 630 # kilograms, adjusted (kg); Σ (reps × sets × weight × neural_drive_factor), where neural_drive_factor>=0.5
+  epoc: 4
+  sfr_stability: 3.12 # sqrt (stimulus_stability) / epoc
+  sfr_neuromechanical_impulse: 7.246 # sqrt (stimulus_neuromechanical_impulse) / epoc
+  sfr_position: 1.2 # sqrt (stimulus_position) / epoc
+
+
+
+tags:
+  - MTOR+
