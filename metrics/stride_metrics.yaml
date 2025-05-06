@@ -1,0 +1,92 @@
+# File: metrics/stride_metrics.yaml
+# Purpose: Define metrics tracked per stride effort in aerobic strides protocol
+
+version: v1.0
+description: >
+  These metrics are logged for each individual stride in aerobic strides sessions.
+  They are used to calculate SFR[STRIDE], LCR trends, error deltas, and neuromuscular efficiency.
+
+fields:
+
+  stride_index:
+    type: integer
+    description: Index number of the stride within the session
+    example: 8
+
+  time:
+    type: float
+    units: sec
+    description: Duration of the stride effort in seconds
+    example: 12.0
+
+  max_pace:
+    type: pace
+    units: min/km
+    description: Peak pace achieved during the stride
+    example: "2:33"
+
+  avg_pace:
+    type: pace
+    units: min/km
+    description: Average pace over the stride duration
+    example: "3:20"
+
+  garmin_power:
+    type: integer
+    units: W
+    description: Power output recorded by Garmin HRM-Pro; tracks total power output
+    example: 384
+
+  stryd_power:
+    type: integer
+    units: W
+    description: Power output recorded by Stryd footpod; tracks only mechanical power output
+    example: 360
+
+  recovery_hr:
+    type: integer
+    units: bpm
+    description: Heart rate at the end of the recovery walk following the stride, triggering a new stride (bottom threshold to peak_hr as the top threshold)
+    example: 114
+
+  recovery_time:
+    type: float
+    units: sec
+    description: Time from stride end to the beginning of the next stride (i.e., walk duration)
+    example: 171
+
+  peak_hr:
+    type: integer
+    units: bpm
+    description: Peak heart rate immediately following the stride
+    example: 154
+
+  lactate_clearance_rate:
+    type: float
+    units: delta_bpm/sec
+    description: Change in HR divided by recovery time (ΔHR / recovery_time), estimating lactate clearance
+    example: 0.255
+
+  lcr_error:
+    type: float
+    units: delta
+    description: Difference between goal LCR and actual LCR (goal_lcr - lcr)
+    example: 0.353
+
+  hr_peak_error:
+    type: integer
+    units: bpm
+    description: Difference between actual peak HR and target zone max
+    example: 5
+
+  speed_error:
+    type: float
+    units: sec
+    description: Difference between target stride time and actual stride time
+    example: 2.0
+
+  stride_rss:
+    type: float
+    units: unitless
+    description: Relative Stride Stress score—session-specific training stress from this stride. Calculated by Stryd.
+    example: 1.0

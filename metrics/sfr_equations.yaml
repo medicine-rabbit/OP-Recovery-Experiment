@@ -1,0 +1,42 @@
+# File: metrics/sfr_equations.yaml
+# Purpose: Define all active Stimulus-to-Fatigue Ratio (SFR) equations used in Adaptive Systems Physiology logs
+
+version: v0.1
+description: >
+  These equations quantify the ratio between adaptive stimulus and physiological fatigue cost.
+  Use the appropriate SFR key in session logs (e.g., SFR[STRIDE]) and reference this file.
+
+models:
+
+  SFR[STRIDE]:
+    equation: "avg_stride_time_sec / avg_stride_rss"
+    units: "s/RSS"
+    notes: >
+      Used for short aerobic strides.
+
+  SFR[LACTATE+]:
+    equation: "total_recovery_time_sec/recovery_rss"
+    units: "s/RSS"
+    notes: >
+      Used for lactate tolerance or clearance after high-intensity splits.
+
+  SFR[RUN]:
+    equation: "effective_zone_2_time_min / RSS"
+    units: "min/RSS"
+    notes: >
+      Generalized run stimulus model for base runs. Effective zone 2 time is considered time not punctuated by heart
+      rate spikes greater than zone 3, where zone 2 time is greater than 20 minutes.
+
+  SFR[OWL]:
+    equation: "sqrt(total_volume) / EPOC"
+    units: "kg/unitless"
+    notes: >
+      Weightlifting stimulus model. Volume load is total kg lifted; EPOC is calculated by Garmin.
+      Useful for tracking diminishing returns from volume in Olympic lifts and accessory work.
+
+  SFR[RECOVERY]:
+    equation: "hrv_change_ms / recovery_duration_min"
+    units: "ms/min"
+    notes: >
+      Used to assess recovery sessions.
+
