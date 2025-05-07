@@ -18,3 +18,12 @@ To github.com:medicine-rabbit/OP-Recovery-Experiment.git
  create mode 100644 specs/.OWL_specification.yaml.kate-swp
 To github.com:medicine-rabbit/OP-Recovery-Experiment.git
    2295b43..97c1cb6  main -> main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
