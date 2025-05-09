@@ -1,0 +1,74 @@
+f1_vo2_to_kj:
+  inputs:
+    vo2: float  # ml/kg/min
+    re_efficiency: float  # from RE model
+  outputs:
+    energy_kj: float
+  formula: "energy_kj = (vo2 * re_efficiency)"
+  notes: "Base metabolic to mechanical energy conversion"
+
+re_model:
+  inputs:
+    vo2: float
+    wattage: float
+  outputs:
+    re_efficiency: float
+  formula: "re = wattage / vo2"
+  parameters:
+    smoothing_window: 3  # optional moving average
+  data_source: "stryd_power + garmin_vo2"
+
+lactate_shuttling_model:
+  inputs:
+    wattage: float
+    time_sec: float
+    lcr: float  # output from LCR model
+  outputs:
+    est_lactate: float  # mmol/L
+  formula: "est_lactate = (wattage * time_sec * k1) - (lcr * time_sec)"
+  parameters:
+    k1: 0.01  # adjust based on empirical correlation
+  notes: "Estimates lactate buildup during effort"
+
+lactate_clearance_model:
+  inputs:
+    heart_rate_drop: float
+    time_sec: float
+  outputs:
+    lcr: float  # mmol/sec
+  formula: "lcr = delta_hr / time_sec"
+  parameters:
+    normalization_factor: 0.2  # tune from stride recovery data
+  data_source: "stride_recovery_log.csv"
+
+form_power_model:
+  inputs:
+    lactate: float
+  outputs:
+    form_power_cost: float
+  formula: "form_power = base + slope * lactate"
+  parameters:
+    base: 38  # watts
+    slope: 1.2  # watts per mmol lactate
+  notes: "Used to adjust F3 cost function"
+
+neural_drive_model:
+  inputs:
+    grip_strength: float
+    rem_minutes: float
+  outputs:
+    neural_drive: float
+  formula: "sqrt(grip_strength * rem_minutes)"
+  parameters:
+    rem_weight: 1.0  # tweak if REM is nonlinear
+  data_source: "daily_log.yaml"
+
+max_power_model:
+  inputs:
+    neural_drive: float
+  outputs:
+    max_power: float
+  formula: "max_power = base + (neural_drive * multiplier)"
+  parameters:
+    base: 280
+    multiplier: 0.8
