@@ -19,14 +19,14 @@
 		{"id":"ae42d756132be3a9","type":"text","text":"Running Economy","x":-660,"y":780,"width":250,"height":60,"color":"6"},
 		{"id":"dee6391d456ef559","type":"text","text":"Lactate Shuttling Model","x":-130,"y":180,"width":250,"height":60,"color":"6"},
 		{"id":"915acd7288b650d0","type":"text","text":"Lactate Clearance Rate Model","x":-125,"y":320,"width":250,"height":60,"color":"6"},
-		{"id":"ab43581eb1fdb7f5","type":"text","text":"Running Fatigue Model","x":2180,"y":-990,"width":250,"height":60,"color":"6"},
 		{"id":"49c3226fb8886b52","type":"text","text":"F₂: Energy, Lactate → Total Power (W)\n\nFunctional efficiency: power/energy","x":60,"y":-140,"width":250,"height":190,"color":"2"},
 		{"id":"c3a86149c9a9376f","type":"text","text":"Max Power Model","x":60,"y":-300,"width":250,"height":60,"color":"6"},
 		{"id":"e8cefce946bcde96","type":"text","text":"Output","x":960,"y":-75,"width":250,"height":60,"color":"1"},
 		{"id":"5ad620add79ae869","type":"text","text":"Form Power Cost Model","x":480,"y":1290,"width":250,"height":60,"color":"6"},
 		{"id":"c6ed06b6e53e1084","type":"text","text":"Form Speed Cost Model","x":1120,"y":1120,"width":250,"height":60,"color":"6"},
 		{"id":"211c2e5a64dd3389","type":"text","text":"Running Dynamics","x":995,"y":1380,"width":250,"height":60,"color":"4"},
-		{"id":"4966259b2d93d9ff","x":2180,"y":-1200,"width":250,"height":60,"color":"4","type":"text","text":"7-day Fatigue Data"}
+		{"id":"4966259b2d93d9ff","type":"text","text":"7-day Fatigue Data","x":2180,"y":-1200,"width":250,"height":60,"color":"4"},
+		{"id":"ab43581eb1fdb7f5","type":"text","text":"Running Fatigue Model","x":2240,"y":-900,"width":250,"height":60,"color":"6"}
 	],
 	"edges":[
 		{"id":"1044849e1c11bdfa","fromNode":"82475395612a8640","fromSide":"right","toNode":"49c3226fb8886b52","toSide":"left","label":"kJ"},
@@ -58,15 +58,15 @@
 		{"id":"6a2092c324a2bf9d","fromNode":"430be55535c2e418","fromSide":"top","toNode":"c921ab757d8ef3f6","toSide":"bottom"},
 		{"id":"79973be630cceb9e","fromNode":"c921ab757d8ef3f6","fromSide":"right","toNode":"3a3e7cdfbc3f50c5","toSide":"top","label":"neural drive coefficient"},
 		{"id":"513dc0d7bc1d666c","fromNode":"c921ab757d8ef3f6","fromSide":"right","toNode":"c3a86149c9a9376f","toSide":"left","label":"neural drive coefficient"},
-		{"id":"f652635bf5c5efcb","fromNode":"ab43581eb1fdb7f5","fromSide":"right","toNode":"3a3e7cdfbc3f50c5","toSide":"right","label":"fatigue coefficient"},
+		{"id":"f652635bf5c5efcb","fromNode":"ab43581eb1fdb7f5","fromSide":"bottom","toNode":"3a3e7cdfbc3f50c5","toSide":"right","label":"fatigue coefficient"},
 		{"id":"7cee85eb12a44cb2","fromNode":"e8cefce946bcde96","fromSide":"right","toNode":"6bceb2d903839a4f","toSide":"left"},
 		{"id":"629493de99abec20","fromNode":"c6ed06b6e53e1084","fromSide":"top","toNode":"c4c15bdbd78acd05","toSide":"bottom","label":"form speed cost"},
 		{"id":"5dc9b9ea7bd0c7aa","fromNode":"8049b15cba80eb98","fromSide":"bottom","toNode":"c6ed06b6e53e1084","toSide":"left","label":"W"},
 		{"id":"2519ef4b2931d1e9","fromNode":"dee6391d456ef559","fromSide":"right","toNode":"c6ed06b6e53e1084","toSide":"left","label":"lactate"},
-		{"id":"45a34ecfb713699c","fromNode":"ab43581eb1fdb7f5","fromSide":"right","toNode":"c6ed06b6e53e1084","toSide":"right","label":"fatigue coefficient"},
-		{"id":"7e593bab180fa1d7","fromNode":"ab43581eb1fdb7f5","fromSide":"right","toNode":"5ad620add79ae869","toSide":"right","label":"fatigue coefficient"},
-		{"id":"d65b2232898f5798","fromNode":"211c2e5a64dd3389","fromSide":"right","toNode":"c6ed06b6e53e1084","toSide":"bottom"},
-		{"id":"d26249dbd6aa2bb5","fromNode":"211c2e5a64dd3389","fromSide":"left","toNode":"5ad620add79ae869","toSide":"bottom"},
+		{"id":"45a34ecfb713699c","fromNode":"ab43581eb1fdb7f5","fromSide":"bottom","toNode":"c6ed06b6e53e1084","toSide":"right","label":"fatigue coefficient"},
+		{"id":"7e593bab180fa1d7","fromNode":"ab43581eb1fdb7f5","fromSide":"bottom","toNode":"5ad620add79ae869","toSide":"right","label":"fatigue coefficient"},
+		{"id":"d65b2232898f5798","fromNode":"211c2e5a64dd3389","fromSide":"right","toNode":"c6ed06b6e53e1084","toSide":"left"},
+		{"id":"d26249dbd6aa2bb5","fromNode":"211c2e5a64dd3389","fromSide":"left","toNode":"5ad620add79ae869","toSide":"right"},
 		{"id":"b71ce2f69cb11d1c","fromNode":"4966259b2d93d9ff","fromSide":"bottom","toNode":"ab43581eb1fdb7f5","toSide":"top"}
 	]
 }
