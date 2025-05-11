@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "running_model/main.canvas",
+                "file": "running_model/OP Exposure Model.canvas",
                 "viewState": {
-                  "x": 625,
-                  "y": 120.00000000000006,
-                  "zoom": -0.8946469998537714
+                  "x": 235,
+                  "y": -18.319334230019024,
+                  "zoom": -1
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "main"
+              "title": "OP Exposure Model"
             }
           }
         ]
@@ -172,10 +172,53 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
+  "floating": {
+    "id": "25227b1a67cb7ea2",
+    "type": "floating",
+    "children": [
+      {
+        "id": "48cf354316d19393",
+        "type": "window",
+        "children": [
+          {
+            "id": "31b7071f50e696d8",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "4a45366cacdfe5d7",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "running_model/OP Exposure Model.canvas",
+                    "viewState": {
+                      "x": -635,
+                      "y": 250,
+                      "zoom": -1.563489433937254
+                    }
+                  },
+                  "icon": "lucide-layout-dashboard",
+                  "title": "OP Exposure Model"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 766,
+        "y": 107,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "69b045d0d4cd0855",
   "lastOpenFiles": [
-    "running_model/Untitled.canvas",
     "running_model/main.canvas",
+    "running_model/Untitled.canvas",
+    "running_model/OP Exposure Model.canvas",
     "running_model",
     "Untitled.md",
     "Welcome.md"
