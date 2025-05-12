@@ -2,31 +2,31 @@
 	"nodes":[
 		{"id":"188003553994fd89","type":"text","text":"**OP Exposure → Disrupted Cholinergic Balance via CHT1**\n\n• OPs (e.g. chlorpyrifos, sarin, DFP) are lipophilic compounds that easily cross the blood-brain barrier.\n\n• They irreversibly inhibit **acetylcholinesterase (AChE)** by phosphorylating its active site.","x":-1860,"y":-230,"width":250,"height":730},
 		{"id":"b11c2e6a0a1adf97","type":"text","text":"**AChE Inhibition → Excess Acetylcholine (ACh)**\n\n• This leads to a buildup of ACh in synapses.\n\n• Causes **persistent activation** of nicotinic and muscarinic receptors.\n\n• Leads to a **toxic overstimulation** of cholinergic neurons (hyperexcitation, desensitization, calcium dysregulation).\n\n• AChE inhibition → ACh remains in the synapse longer → ACh levels ↑","x":-1440,"y":-230,"width":250,"height":730},
-		{"id":"967c202804a2284d","type":"text","text":"**Compensatory Downregulation and Cholinergic Stress**\n\n🠖 _ACh ↓ → CHT1 trafficking reduction_\n\n• The nervous system attempts to restore balance:\n• Downregulates cholinergic receptor expression\n• Alters the trafficking and expression of CHT1 to reduce further ACh synthesis","x":-1000,"y":-230,"width":250,"height":730},
+		{"id":"967c202804a2284d","type":"text","text":"CHT1 Downregulation: Reduced Synthesis, Persistent ACh Excess\n\n🠖 _ACh ↓ → CHT1 trafficking reduction_\n\n• The nervous system attempts to restore balance:\n• Downregulates cholinergic receptor expression\n• Alters the trafficking and expression of CHT1 to reduce further ACh synthesis\n• Reduced CHT1 trafficking and gene expression limit choline uptake → ACh synthesis slows.\n• However, synaptic ACh remains elevated due to blocked degradation (AChE inhibition), maintaining toxic overstimulation.”","x":-1000,"y":-230,"width":250,"height":730},
 		{"id":"50cbf1f193c7f826","type":"text","text":"Indirect stress from ACh excess causes trafficking dysregulation (less CHT1 at the membrane)","x":-840,"y":-720,"width":250,"height":263},
-		{"id":"640c029b1e570923","type":"text","text":"Inflammation (IL-6, TNF-α) downregulates choline transporter gene expression (SLC5A7)","x":1120,"y":12,"width":250,"height":246},
-		{"id":"26c974987217866d","x":440,"y":-10,"width":250,"height":290,"type":"text","text":"↓ Choline availability → ↓ ACh synthesis (because choline is the rate-limiting substrate)\n\n"},
+		{"id":"26c974987217866d","type":"text","text":"↓ Choline availability → ↓ ACh synthesis (because choline is the rate-limiting substrate)\n\n","x":440,"y":-10,"width":250,"height":290},
 		{"id":"d678371f858b4a31","type":"text","text":"**CHT1 Impairment**\n\n**↓ CHT1** trafficking and gene expression → ↓ choline uptake\n\nCHT1 is responsible for importing choline into presynaptic terminals, which is:\n• The rate-limiting step in ACh synthesis\n• Highly dependent on sodium gradient and membrane integrity\n\n","x":-220,"y":-245,"width":250,"height":760},
-		{"id":"fe753218f38693f9","x":-620,"y":-200,"width":250,"height":171,"type":"text","text":"↓ Vesicular ACh release → less newly made ACh enters the cleft"},
-		{"id":"b36e45a3434cdead","x":-2400,"y":105,"width":250,"height":60,"type":"text","text":"Deployment"},
-		{"id":"f26585f1a6f53638","x":-1860,"y":-648,"width":250,"height":60,"type":"text","text":"OP-induced Mitochondrial ROS"},
-		{"id":"96773d8872909e72","x":-1860,"y":-848,"width":250,"height":60,"type":"text","text":"mitochondrial ROS"},
-		{"id":"8bb1fd9a314acbb8","x":-1860,"y":-1040,"width":250,"height":60,"type":"text","text":"Lipid peroxidation"},
-		{"id":"928a5beee65e8c9e","type":"text","text":"**Mitochondrial Membrane Fluidity Disruption**\n\nLipid peroxidation + mitochondrial stress → membrane fluidity disruption\n\n","x":-220,"y":-1360,"width":250,"height":400}
+		{"id":"b36e45a3434cdead","type":"text","text":"Deployment","x":-2400,"y":105,"width":250,"height":60},
+		{"id":"f26585f1a6f53638","type":"text","text":"OP-induced Mitochondrial ROS","x":-1860,"y":-648,"width":250,"height":60},
+		{"id":"96773d8872909e72","type":"text","text":"mitochondrial ROS","x":-1860,"y":-848,"width":250,"height":60},
+		{"id":"8bb1fd9a314acbb8","type":"text","text":"Lipid peroxidation","x":-1860,"y":-1040,"width":250,"height":60},
+		{"id":"928a5beee65e8c9e","type":"text","text":"**Mitochondrial Membrane Fluidity Disruption**\n\nLipid peroxidation + mitochondrial stress → membrane fluidity disruption\n\n","x":-220,"y":-1360,"width":250,"height":400},
+		{"id":"fe753218f38693f9","type":"text","text":"↓ Vesicular ACh release → less newly made ACh enters the cleft","x":-60,"y":920,"width":250,"height":171},
+		{"id":"640c029b1e570923","type":"text","text":"Inflammation \n\n(IL-6, TNF-α) downregulates choline transporter gene expression (SLC5A7)","x":1240,"y":-10,"width":250,"height":290}
 	],
 	"edges":[
 		{"id":"f18cc0f06cfd41fc","fromNode":"188003553994fd89","fromSide":"right","toNode":"b11c2e6a0a1adf97","toSide":"left"},
 		{"id":"9893d75fe33cbab9","fromNode":"b11c2e6a0a1adf97","fromSide":"right","toNode":"967c202804a2284d","toSide":"left","label":"ACh ↑"},
-		{"id":"147f3dc41a91d0c2","fromNode":"967c202804a2284d","fromSide":"right","toNode":"fe753218f38693f9","toSide":"left","label":"ACh ↓"},
-		{"id":"2d5ad69ad9619896","fromNode":"26c974987217866d","fromSide":"right","toNode":"640c029b1e570923","toSide":"left","label":"IL-6 ↑"},
+		{"id":"2d5ad69ad9619896","fromNode":"26c974987217866d","fromSide":"bottom","toNode":"640c029b1e570923","toSide":"bottom","label":"IL-6 ↑"},
 		{"id":"a2c89cd47a73fe20","fromNode":"b11c2e6a0a1adf97","fromSide":"top","toNode":"50cbf1f193c7f826","toSide":"left","label":"ACh ↑ "},
 		{"id":"ffc27cb92d8f7801","fromNode":"50cbf1f193c7f826","fromSide":"right","toNode":"d678371f858b4a31","toSide":"top","label":"CHT1 ↓ "},
 		{"id":"99d5982bca4360bb","fromNode":"d678371f858b4a31","fromSide":"right","toNode":"26c974987217866d","toSide":"left","label":"Choline ↓"},
-		{"id":"889304873fe47d6c","fromNode":"967c202804a2284d","fromSide":"right","toNode":"d678371f858b4a31","toSide":"left","label":"ACh ↓ "},
 		{"id":"9efc8df2d456bcd8","fromNode":"b36e45a3434cdead","fromSide":"right","toNode":"188003553994fd89","toSide":"left","label":"OP Exposure"},
 		{"id":"7fdf061d540963a6","fromNode":"188003553994fd89","fromSide":"top","toNode":"f26585f1a6f53638","toSide":"bottom"},
 		{"id":"0f39fb0705bc1006","fromNode":"f26585f1a6f53638","fromSide":"top","toNode":"96773d8872909e72","toSide":"bottom"},
 		{"id":"68cce4e203417983","fromNode":"96773d8872909e72","fromSide":"top","toNode":"8bb1fd9a314acbb8","toSide":"bottom"},
-		{"id":"cb3448a01453af12","fromNode":"8bb1fd9a314acbb8","fromSide":"top","toNode":"928a5beee65e8c9e","toSide":"left","label":"Oxidative Stress"}
+		{"id":"cb3448a01453af12","fromNode":"8bb1fd9a314acbb8","fromSide":"top","toNode":"928a5beee65e8c9e","toSide":"left","label":"Oxidative Stress"},
+		{"id":"8945be2c6bc4403b","fromNode":"967c202804a2284d","fromSide":"right","toNode":"d678371f858b4a31","toSide":"left"},
+		{"id":"26ed3ab52826e02c","fromNode":"640c029b1e570923","fromSide":"top","toNode":"26c974987217866d","toSide":"top","label":"Neuroinflammation Amplifies Cholinergic Stress"}
 	]
 }

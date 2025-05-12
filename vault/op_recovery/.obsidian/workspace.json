@@ -15,9 +15,9 @@
               "state": {
                 "file": "running_model/OP Exposure Model.canvas",
                 "viewState": {
-                  "x": 235,
-                  "y": -18.319334230019024,
-                  "zoom": -1
+                  "x": -515,
+                  "y": 497.4102561828948,
+                  "zoom": -0.9009996658785613
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -205,9 +205,9 @@
           }
         ],
         "direction": "vertical",
-        "x": 766,
+        "x": 1123,
         "y": 107,
-        "width": 1024,
+        "width": 2034,
         "height": 800,
         "maximize": false,
         "zoom": 0
@@ -217,8 +217,8 @@
   "active": "69b045d0d4cd0855",
   "lastOpenFiles": [
     "running_model/main.canvas",
-    "running_model/Untitled.canvas",
     "running_model/OP Exposure Model.canvas",
+    "running_model/Untitled.canvas",
     "running_model",
     "Untitled.md",
     "Welcome.md"
