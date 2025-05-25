@@ -1,0 +1,18 @@
+Pattern:
+  name: string
+  type: antipattern
+  description: >
+    Reproducible trigger or configuration associated with physiological regression.
+  trigger_conditions:
+    - condition_1
+    - condition_2
+  observed_effects:
+    - grip ↓
+    - REM ↓
+    - HRV ↓
+  countermeasures:
+    - avoid [substance/timing]
+    - schedule [offset/replacement protocol]
+  hypotheses:
+    - string
+  status: under review | confirmed | retired

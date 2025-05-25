@@ -1,0 +1,18 @@
+Pattern:
+  name: string
+  type: architectural
+  description: >
+    Multi-day structure targeting multiple systems in succession.
+  protocol_sequence:
+    - Day 1: [stimulus_tags]
+    - Day 2: [stimulus_tags]
+  activation_conditions:
+    - condition_1
+    - condition_2
+  outcome_metrics:
+    - grip > 3_day_avg
+    - rem > 3_day_avg
+    - hrv ↑
+  hypotheses:
+    - string
+  status: confirmed | experimental | failed

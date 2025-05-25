@@ -1,0 +1,19 @@
+Pattern:
+  name: LED Juggling for Neurointegration
+  type: design
+  description: >
+    Sensorimotor-juggling with peripheral blue light for BDNF+ and REM enhancement
+  protocol:
+    - inputs: [blue LED, 3-ball cascade, 432Hz music]
+    - activity: juggling
+    - timing: 15 minutes pre-bed or post-run
+  mechanism_tags:
+    - BDNF+
+    - CREB+
+  measurable_effects:
+    - REM rebound
+    - grip increase
+    - ruminative loop reduction
+  hypotheses:
+    - Peripheral photic stimulation enhances sensory integration and REM initiation
+  status: confirmed

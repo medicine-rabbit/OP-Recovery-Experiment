@@ -1,0 +1,16 @@
+Pattern:
+  name: Midday Alpha-GPC
+  type: antipattern
+  description: >
+    Administering alpha-GPC too early leads to potential circadian misalignment and REM suppression
+  trigger_conditions:
+    - alpha-GPC taken between 11:00–14:00
+  observed_effects:
+    - REM ↓
+    - RHR ↑
+    - rumination ↑
+  countermeasures:
+    - shift alpha-GPC to 30–60 min pre-bed
+  hypotheses:
+    - Midday ACh surge narrows REM window and increases verbal loop activation
+  status: under review

@@ -1,0 +1,18 @@
+Pattern:
+  name: Cascade Pair
+  type: architectural
+  description: >
+    2-day structure: Neuroplastic Double (mTOR+BDNF) followed by Dual-Signal Day (AMPK+MITO+NEURO).
+  protocol_sequence:
+    - Day 1: [mTOR+, BDNF+, CREB+]
+    - Day 2: [AMPK+, MITO+, NEURO+]
+  activation_conditions:
+    - alpha-GPC night before Day 1
+    - bitartrate in morning
+  outcome_metrics:
+    - grip > 3_day_avg
+    - REM > 3_day_avg
+    - HRV ↑
+  hypotheses:
+    - Multi-day potentiation enhances neuroimmune buffering and REM resilience
+  status: experimental

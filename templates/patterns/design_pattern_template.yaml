@@ -1,0 +1,20 @@
+Pattern:
+  name: string
+  type: design
+  description: >
+    Single-session protocol targeting a physiological or neural adaptation.
+  protocol:
+    - inputs: [e.g. cacao, Lion’s Mane, blue light]
+    - activity: [e.g. juggling, aerobic strides]
+    - timing: [before run, bedtime, etc.]
+  mechanism_tags:
+    - BDNF+
+    - CREB+
+    - AMPK+
+  measurable_effects:
+    - HR recovery < 90s
+    - REM duration ↑
+    - stride_time ↓
+  hypotheses:
+    - string
+  status: confirmed | experimental | failed
