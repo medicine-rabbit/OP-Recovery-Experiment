@@ -26,3 +26,5 @@
 /home/daniel/OP_Recovery_Experiment/scripts/morning_data_collection.py: line 1: `from garminconnect import ('
 /home/daniel/OP_Recovery_Experiment/scripts/morning_data_collection.py: line 1: syntax error near unexpected token `('
 /home/daniel/OP_Recovery_Experiment/scripts/morning_data_collection.py: line 1: `from garminconnect import ('
+/home/daniel/OP_Recovery_Experiment/scripts/morning_data_collection.py: line 1: syntax error near unexpected token `('
+/home/daniel/OP_Recovery_Experiment/scripts/morning_data_collection.py: line 1: `from garminconnect import ('
