@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"c846f8b60798a49b","x":-540,"y":130,"width":250,"height":370,"color":"4","type":"text","text":"Envelope Run + Aerobic Strides\n\nTake average pace from each 1 km split of the envelope run to set the target pace in the subsequent pace hold run.\n\nFocus on extracting more speed out of the power setting by improving running form."},
+		{"id":"30db2d3f3d9610b3","x":-20,"y":185,"width":250,"height":261,"color":"4","type":"text","text":"Pace Hold (Long Run)\n\nFasted\n\nShould be able to perform a long run at the target pace where HR drifts from zone 2 to the top of zone 3."},
+		{"id":"d42380fedd9eb5cd","x":440,"y":285,"width":250,"height":60,"color":"1","type":"text","text":"[AUTOPHAGY+]"},
+		{"id":"88454ed8a08faacc","x":-1200,"y":186,"width":250,"height":260,"color":"3","type":"text","text":"MAF + Stride Test\n\nDerive power settings for envelope run + aerobic strides."},
+		{"id":"13baf91dea41be7a","x":-540,"y":-200,"width":250,"height":60,"color":"1","type":"text","text":"[AMPK+][MITO+]"},
+		{"id":"c2627489a5fc03d4","x":-540,"y":540,"width":250,"height":60,"color":"1","type":"text","text":"[MECH+][FORM+]"}
+	],
+	"edges":[
+		{"id":"6f2188340d0dcfd7","fromNode":"88454ed8a08faacc","fromSide":"right","toNode":"c846f8b60798a49b","toSide":"left","label":"aerobic + stride power settings\n\n"},
+		{"id":"42d049b3c2eaa219","fromNode":"c846f8b60798a49b","fromSide":"right","toNode":"30db2d3f3d9610b3","toSide":"left","label":"Pace Setting"},
+		{"id":"73f8963fcaf3022a","fromNode":"30db2d3f3d9610b3","fromSide":"right","toNode":"d42380fedd9eb5cd","toSide":"left"},
+		{"id":"13534d0001df6f35","fromNode":"c846f8b60798a49b","fromSide":"bottom","toNode":"c2627489a5fc03d4","toSide":"top"},
+		{"id":"11e58c29b9742be5","fromNode":"88454ed8a08faacc","fromSide":"top","toNode":"13baf91dea41be7a","toSide":"bottom"},
+		{"id":"d89838445cbadc67","fromNode":"c846f8b60798a49b","fromSide":"top","toNode":"13baf91dea41be7a","toSide":"bottom"},
+		{"id":"42e0d56466827314","fromNode":"30db2d3f3d9610b3","fromSide":"top","toNode":"13baf91dea41be7a","toSide":"bottom"}
+	]
+}
