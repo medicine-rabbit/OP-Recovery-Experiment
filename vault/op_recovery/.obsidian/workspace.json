@@ -15,9 +15,9 @@
               "state": {
                 "file": "running_model/Untitled 1.canvas",
                 "viewState": {
-                  "x": -255,
-                  "y": 200,
-                  "zoom": -0.17218097538268054
+                  "x": -292.5,
+                  "y": 376,
+                  "zoom": -0.698249787050268
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -174,10 +174,11 @@
   },
   "active": "69b045d0d4cd0855",
   "lastOpenFiles": [
+    "Envelope Settings.md",
+    "MAF + Strides Settings.md",
     "running_model/main.canvas",
     "running_model/Untitled 1.canvas",
     "running_model/OP Exposure Model.canvas",
-    "Untitled.md",
     "running_model/Untitled.canvas",
     "running_model",
     "Welcome.md"

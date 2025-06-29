@@ -1,0 +1,130 @@
+training_session:
+  date: 2025-06-27
+  type: running
+  subtype: aerobic_envelope_and_strides
+
+  tags:
+  - MITO?  # tentative mitochondrial stimulus, possibly undermined by going to close to LT on third stride
+  - AMPK   # Zone 2 or envelope likely activated AMPK
+  - NEUROMUSCULAR_EFFICIENCY  # session focused on mechanical refinement
+  - CAPILLARY_DENSITY
+
+  PowerWasteEstimate:
+    Formula: "GarminPower - StrydPower - FormPower"
+    Interpretation: "Neuromuscular/mechanical inefficiency (lower = better)"
+
+  efficiency_summary:
+    envelope_power_waste_avg: 30.83 # mean of envelope run power waste
+    stride_power_waste_avg: 212.3 # mean of stride power waste
+    envelope_efficiency_index: 1.52 # (mean stryd / mean garmin) of envelope splits, proxy for horizontal efficiency
+    stride_efficiency_index: 0.51 # (mean stryd / mean garmin) of strides, proxy for horizontal efficiency
+    avg_power_waste_per_kg: 0.39 # 30.83W / 78.4kg (current body weight)
+
+  stride_failure_notes:
+    - false
+    - false
+    - true  # failed to regulate speed → excess power output (896W)
+
+  delayed_response_indicators:
+    grip_change_next_day: -0.9  # kg
+    REM_change_next_night: +13  # minutes
+    HRV_trend_3_day: -3  # ms
+
+  key_insight:
+    - "Failure to stay under 600W in stride 3 may indicate loss of force modulation control at this pace—possible marker for power loss curve modeling."
+
+  envelope_run_component:
+    distance_km: 6.0
+    target_power_watts_garmin: "260-270" # Watts (W)
+    avg_power_watts_garmin: 276 # Watts (W) - total power
+    avg_power_watts_stryd: 181 # Watts (W) - ~horizontal power
+    avg_power_waste: 30.83 # Watts (W) -- derived from Garmin + Stryd
+    avg_pace_min_per_km: 7:15
+    split_power_watts_garmin:
+      - 279 # Watts (W) Garmin
+      - 277 # Watts (W) Garmin
+      - 272 # Watts (W) Garmin
+      - 275 # Watts (W) Garmin
+      - 274 # Watts (W) Garmin
+      - 277 # Watts (W) Garmin
+    split_power_watts_stryd:
+      - 186 # Watts (W) Stryd
+      - 179 # Watts (W) Stryd
+      - 178 # Watts (W) Stryd
+      - 182 # Watts (W) Stryd
+      - 179 # Watts (W) Stryd
+      - 183 # Watts (W) Stryd
+    split_form_power_stryd:
+      - 65 # Watts (W) Stryd
+      - 64 # Watts (W) Stryd
+      - 64 # Watts (W) Stryd
+      - 63 # Watts (W) Stryd
+      - 63 # Watts (W) Stryd
+      - 63 # Watts (W) Stryd
+    power_waste_estimate:
+      - 28  # 279 - 186 - 65 Watts (W)
+      - 34  # 277 - 179 - 64 Watts (W)
+      - 30  # 272 - 178 - 64 Watts (W)
+      - 30  # 275 - 182 - 63 Watts (W)
+      - 32  # 274 - 179 - 63 Watts (W)
+      - 31  # 277 - 183 - 63 Watts (W)
+    split_hr_bpm:
+      - 129 # Beats per minute (bpm)
+      - 133 # Beats per minute (bpm)
+      - 137 # Beats per minute (bpm)
+      - 140 # Beats per minute (bpm)
+      - 149 # Beats per minute (bpm)
+    split_pace_min_per_km:
+      - 7:03 # min/km
+      - 7:24 # min/km
+      - 7:18 # min/km
+      - 7:18 # min/km
+      - 7:17 # min/km
+      - 7:11 # min/km
+
+  stride_component:
+    number_strides: 3
+    target_power_garmin: "500-600" # Watts (W) Garmin
+    target_stride_distance: 100 # meters (m)
+    current_lactate_threshold: 166 # beats per minute (bpm)
+    stride_best_pace:
+      - 3:09 # min/km Garmin
+      - 3:01 # min/km Garmin
+      - 2:12 # min/km Garmin
+    stride_max_power_garmin:
+      - 639 # Watts (W) Garmin
+      - 640 # Watts (W) Garmnin
+      - 896 # Watts (W) Garmin -- failed to run at slower speed
+    stride_max_power_stryd:
+      - 399 # Watts (W) Stryd
+      - 411 # Watts (W) Stryd
+      - 531 # Watts (W) Stryd
+    stride_form_power:
+      - 65 # Watts (W) Stryd
+      - 65 # Watts (W) Stryd
+      - 67 # Watts (W) Stryd
+    stride_peak_hr:
+      - 158 # beats per minute (bpm) Garmin HR Pro
+      - 163 # beats per minute (bpm) Garmin HR Pro
+      - 165 # beats per minute (bpm) Garmin HR Pro
+    power_waste_estimate:
+      - 175 # 639 - 399 - 65 Watts (W)
+      - 164 # 640 - 411 - 65 Watts (W)
+      - 298 # 896 - 531 - 67 Watts (W)
+    post_stride_lactate_spikes:
+      - false
+      - false
+      - false # near failure
+
+    load_indicators:
+      HRV_pre: 49 # milliseconds (ms) Garmin
+      HRV_post: 29 # milliseconds (ms) Garmin
+      stress_pre: 34 # Garmnin
+      stress_post: null # G!
+
+    subjective_feedback:
+      perceived_effort_rpe: 2  # scale 1–10
+      soreness_next_day: very_mild # none, very_mild, mild, moderate, severe
+      fatigue_event_occurred: no  # yes/no
+      notes: |
+        Having great difficulty running slowly. But my failure on the third stride to run slower revealed the possibility of a power loss curve that I can track.

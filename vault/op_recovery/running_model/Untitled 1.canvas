@@ -1,11 +1,13 @@
 {
 	"nodes":[
-		{"id":"c846f8b60798a49b","x":-540,"y":130,"width":250,"height":370,"color":"4","type":"text","text":"Envelope Run + Aerobic Strides\n\nTake average pace from each 1 km split of the envelope run to set the target pace in the subsequent pace hold run.\n\nFocus on extracting more speed out of the power setting by improving running form."},
-		{"id":"30db2d3f3d9610b3","x":-20,"y":185,"width":250,"height":261,"color":"4","type":"text","text":"Pace Hold (Long Run)\n\nFasted\n\nShould be able to perform a long run at the target pace where HR drifts from zone 2 to the top of zone 3."},
-		{"id":"d42380fedd9eb5cd","x":440,"y":285,"width":250,"height":60,"color":"1","type":"text","text":"[AUTOPHAGY+]"},
-		{"id":"88454ed8a08faacc","x":-1200,"y":186,"width":250,"height":260,"color":"3","type":"text","text":"MAF + Stride Test\n\nDerive power settings for envelope run + aerobic strides."},
-		{"id":"13baf91dea41be7a","x":-540,"y":-200,"width":250,"height":60,"color":"1","type":"text","text":"[AMPK+][MITO+]"},
-		{"id":"c2627489a5fc03d4","x":-540,"y":540,"width":250,"height":60,"color":"1","type":"text","text":"[MECH+][FORM+]"}
+		{"id":"c846f8b60798a49b","type":"text","text":"Envelope Run + Aerobic Strides\n\nTake average pace from each 1 km split of the envelope run to set the target pace in the subsequent pace hold run.\n\nFocus on extracting more speed out of the power setting by improving running form.","x":-540,"y":130,"width":250,"height":370,"color":"4"},
+		{"id":"30db2d3f3d9610b3","type":"text","text":"Pace Hold (Long Run)\n\nFasted\n\nShould be able to perform a long run at the target pace where HR drifts from zone 2 to the top of zone 3.","x":-20,"y":185,"width":250,"height":261,"color":"4"},
+		{"id":"d42380fedd9eb5cd","type":"text","text":"[AUTOPHAGY+]","x":440,"y":285,"width":250,"height":60,"color":"1"},
+		{"id":"88454ed8a08faacc","type":"text","text":"MAF + Stride Test\n\nDerive power settings for envelope run + aerobic strides.","x":-1200,"y":186,"width":250,"height":260,"color":"3"},
+		{"id":"13baf91dea41be7a","type":"text","text":"[AMPK+][MITO+]","x":-540,"y":-200,"width":250,"height":60,"color":"1"},
+		{"id":"c2627489a5fc03d4","type":"text","text":"[MECH+][FORM+]","x":-540,"y":540,"width":250,"height":60,"color":"1"},
+		{"id":"2d1b8ceb72e4f22e","type":"file","file":"Envelope Settings.md","x":-615,"y":735,"width":400,"height":217},
+		{"id":"4a64c662a1178bdd","type":"file","file":"MAF + Strides Settings.md","x":-1275,"y":735,"width":400,"height":217}
 	],
 	"edges":[
 		{"id":"6f2188340d0dcfd7","fromNode":"88454ed8a08faacc","fromSide":"right","toNode":"c846f8b60798a49b","toSide":"left","label":"aerobic + stride power settings\n\n"},
