@@ -235,3 +235,13 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
+[main 567cce0] Daily sync: 2025-06-28 23:59:00
+ 7 files changed, 157 insertions(+), 10 deletions(-)
+ create mode 100644 templates/running/aerobic_envelope_then_strides_2025-06-27.yaml
+ create mode 100644 vault/op_recovery/Envelope Settings.md
+ create mode 100644 vault/op_recovery/MAF + Strides Settings.md
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
