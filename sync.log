@@ -295,3 +295,8 @@ To github.com:medicine-rabbit/OP-Recovery-Experiment.git
  2 files changed, 6 insertions(+)
 To github.com:medicine-rabbit/OP-Recovery-Experiment.git
    d436292..3a61f61  main -> main
+[main b04a076] Daily sync: 2025-07-10 23:59:00
+ 3 files changed, 6 insertions(+), 1 deletion(-)
+ delete mode 100644 dashboard/.~lock.morning_metrics.csv#
+To github.com:medicine-rabbit/OP-Recovery-Experiment.git
+   3a61f61..b04a076  main -> main
